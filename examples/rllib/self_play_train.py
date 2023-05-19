@@ -69,7 +69,7 @@ def get_config(
   # Use TensorFlow as the tensor framework.
   config = config.framework("tf")
   # Use GPUs iff `RLLIB_NUM_GPUS` env var set to > 0.
-  config.num_gpus = int(os.environ.get("RLLIB_NUM_GPUS", "0"))
+  config.num_gpus = int(os.environ.get("RLLIB_NUM_GPUS", "1"))
   config.log_level = "DEBUG"
 
   # 2. Set environment config. This will be passed to
@@ -142,7 +142,7 @@ def main():
   ray.init()
 
   stop = {
-      "training_iteration": 1,
+      "training_iteration": 5,
   }
 
   results = tune.Tuner(

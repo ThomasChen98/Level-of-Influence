@@ -62,7 +62,7 @@ def main():
 
   bots = [
       utils.RayModelPolicy(trainer, f"agent_{i}")
-      for i in range(len(config["env_config"]["default_player_roles"]))
+      for i in range(len(config["env_config"]["roles"]))
   ]
 
   timestep = env.reset()
@@ -81,7 +81,7 @@ def main():
   game_display = pygame.display.set_mode(
       (int(shape[1] * scale), int(shape[0] * scale)))
 
-  for _ in range(config["horizon"]):
+  for _ in range(200):
     obs = timestep.observation[0]["WORLD.RGB"]
     obs = np.transpose(obs, (1, 0, 2))
     surface = pygame.surfarray.make_surface(obs)
