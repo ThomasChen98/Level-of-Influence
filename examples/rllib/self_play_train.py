@@ -26,10 +26,10 @@ from meltingpot.python import substrate
 
 
 def get_config(
-    substrate_name: str = "bach_or_stravinsky_in_the_matrix__repeated",
+    substrate_name: str = "pure_coordination_in_the_matrix__repeated",
     num_rollout_workers: int = 2,
     rollout_fragment_length: int = 100,
-    train_batch_size: int = 6400,
+    train_batch_size: int = 1600,
     fcnet_hiddens=(64, 64),
     post_fcnet_hiddens=(256,),
     lstm_cell_size: int = 256,
@@ -142,13 +142,16 @@ def main():
   ray.init()
 
   stop = {
-      "training_iteration": 5,
+      # "training_iteration": 10,
+      "timesteps_total": 5000000
   }
 
   results = tune.Tuner(
       "PPO",
       param_space=config.to_dict(),
-      run_config=air.RunConfig(stop=stop, verbose=1),
+      run_config=air.RunConfig(stop=stop,
+                               checkpoint_config=air.CheckpointConfig(checkpoint_frequency=20),
+                               verbose=1),
   ).fit()
   print(results)
   assert results.num_errors == 0

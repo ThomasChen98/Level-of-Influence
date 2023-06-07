@@ -27,6 +27,7 @@ from ray.rllib.policy.sample_batch import DEFAULT_POLICY_ID
 from examples import utils
 from meltingpot.python import substrate
 from meltingpot.python.utils.policies import policy
+import time
 
 PLAYER_STR_FORMAT = 'player_{index}'
 
@@ -65,6 +66,7 @@ class MeltingPotEnv(multi_agent_env.MultiAgentEnv):
 
   def step(self, action):
     """See base class."""
+    # start = time.time()
     actions = [action[agent_id] for agent_id in self._ordered_agent_ids]
     timestep = self._env.step(actions)
     rewards = {
@@ -75,6 +77,10 @@ class MeltingPotEnv(multi_agent_env.MultiAgentEnv):
     info = {}
 
     observations = utils.timestep_to_observations(timestep)
+    # end = time.time()
+    # print('#'*100)
+    # print(end - start)
+    # print('#'*100)
     return observations, rewards, done, info
 
   def close(self):

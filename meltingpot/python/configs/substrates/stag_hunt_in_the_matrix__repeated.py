@@ -49,22 +49,33 @@ RESOURCE2_COLOR = (225, 30, 70, 255)
 RESOURCE2_HIGHLIGHT_COLOR = (234, 98, 126, 255)
 RESOURCE2_COLOR_DATA = (RESOURCE2_COLOR, RESOURCE2_HIGHLIGHT_COLOR)
 
+# ASCII_MAP = """
+# WWWWWWWWWWWWWWWWWWWWWWW
+# Wn         n         nW
+# W  2WWW W  W  W WW2   W
+# W    W 11a W 222 W    W
+# Wn  WW 11a W a22 WW  nW
+# W      1aa 2 a22      W
+# W  2               2  W
+# Wn WW  WW2 n WW  WWW nW
+# W   2            2    W
+# W      22a 2 aa1      W
+# Wn   W 22a W a11 W   nW
+# W   2W 222 W a11 WW   W
+# W  WWWW W  W  W WWW2  W
+# Wn         n         nW
+# WWWWWWWWWWWWWWWWWWWWWWW
+# """
 ASCII_MAP = """
-WWWWWWWWWWWWWWWWWWWWWWW
-Wn         n         nW
-W  2WWW W  W  W WW2   W
-W    W 11a W 222 W    W
-Wn  WW 11a W a22 WW  nW
-W      1aa 2 a22      W
-W  2               2  W
-Wn WW  WW2 n WW  WWW nW
-W   2            2    W
-W      22a 2 aa1      W
-Wn   W 22a W a11 W   nW
-W   2W 222 W a11 WW   W
-W  WWWW W  W  W WWW2  W
-Wn         n         nW
-WWWWWWWWWWWWWWWWWWWWWWW
+WWWWWWWWWWWWW
+Wn         nW
+W    111    W
+W    2a2    W
+Wn         nW
+W    1a1    W
+W    222    W
+Wn         nW
+WWWWWWWWWWWWW
 """
 
 _resource_names = [

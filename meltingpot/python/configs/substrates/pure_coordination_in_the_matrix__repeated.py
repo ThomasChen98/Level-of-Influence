@@ -17,7 +17,7 @@ Example video: https://youtu.be/biyhB378q58
 
 See _Running with Scissors in the Matrix_ for a general description of the
 game dynamics. Here the payoff matrix represents a pure coordination game.
-`K = 3`, three different resources corresponding to different coordination
+`K = 2`, two different resources corresponding to different coordination
 outcomes.
 
 Players have a `5 x 5` observation window.
@@ -39,52 +39,57 @@ from meltingpot.python.utils.substrates import specs
 _ENABLE_DEBUG_OBSERVATIONS = False
 
 # The number of resources must match the (square) size of the matrix.
-NUM_RESOURCES = 3
+NUM_RESOURCES = 2
 
-# This color is red.
-RESOURCE1_COLOR = (150, 0, 0, 255)
-RESOURCE1_HIGHLIGHT_COLOR = (200, 0, 0, 255)
-RESOURCE1_COLOR_DATA = (RESOURCE1_COLOR, RESOURCE1_HIGHLIGHT_COLOR)
 # This color is green.
-RESOURCE2_COLOR = (0, 150, 0, 255)
-RESOURCE2_HIGHLIGHT_COLOR = (0, 200, 0, 255)
-RESOURCE2_COLOR_DATA = (RESOURCE2_COLOR, RESOURCE2_HIGHLIGHT_COLOR)
+RESOURCE1_COLOR = (0, 150, 0, 255)
+RESOURCE1_HIGHLIGHT_COLOR = (0, 200, 0, 255)
+RESOURCE1_COLOR_DATA = (RESOURCE1_COLOR, RESOURCE1_HIGHLIGHT_COLOR)
 # This color is blue.
-RESOURCE3_COLOR = (0, 0, 150, 255)
-RESOURCE3_HIGHLIGHT_COLOR = (0, 0, 200, 255)
-RESOURCE3_COLOR_DATA = (RESOURCE3_COLOR, RESOURCE3_HIGHLIGHT_COLOR)
+RESOURCE2_COLOR = (0, 0, 150, 255)
+RESOURCE2_HIGHLIGHT_COLOR = (0, 0, 200, 255)
+RESOURCE2_COLOR_DATA = (RESOURCE2_COLOR, RESOURCE2_HIGHLIGHT_COLOR)
 
+# ASCII_MAP = """
+# WWWWWWWWWWWWWWWWWWWWWWW
+# Wn         n         nW
+# W  2WWW W  W  W WW2   W
+# W    W 11a W 222 W    W
+# Wn  WW 11a W a22 WW  nW
+# W      1aa 2 a22      W
+# W  2               2  W
+# Wn WW  WW2 n WW  WWW nW
+# W   2            2    W
+# W      22a 2 aa1      W
+# Wn   W 22a W a11 W   nW
+# W   2W 222 W a11 WW   W
+# W  WWWW W  W  W WWW2  W
+# Wn         n         nW
+# WWWWWWWWWWWWWWWWWWWWWWW
+# """
 ASCII_MAP = """
-WWWWWWWWWWWWWWWWWWWWWWW
-Wn         n         nW
-W   WWW W     W WW    W
-W    W rra   app W    W
-Wn  WW rra   app WW  nW
-W      rra   app      W
-W                     W
-Wn WW      n         nW
-W             WWWW    W
-W      ssa W          W
-Wn   W ssa W aaa W   nW
-W    W ssa W aaa WW   W
-W  WWWW W  W  W WWW   W
-Wn         n         nW
-WWWWWWWWWWWWWWWWWWWWWWW
+WWWWWWWWWWWWW
+Wn         nW
+W    111    W
+W    2a2    W
+Wn         nW
+W    1a1    W
+W    222    W
+Wn         nW
+WWWWWWWWWWWWW
 """
 
 _resource_names = [
     "resource_class1",
     "resource_class2",
-    "resource_class3",
 ]
 
 # `prefab` determines which prefab game object to use for each `char` in the
 # ascii map.
 CHAR_PREFAB_MAP = {
     "a": {"type": "choice", "list": _resource_names},
-    "r": _resource_names[0],
-    "p": _resource_names[1],
-    "s": _resource_names[2],
+    "1": _resource_names[0],
+    "2": _resource_names[1],
     "n": "spawn_point",
     "W": "wall",
 }
@@ -221,10 +226,9 @@ def create_scene():
                   # at least one resource.
                   "disallowUnreadyInteractions": True,
                   "matrix": [
-                      # 1  2  3
-                      [1, 0, 0],  # 1
-                      [0, 1, 0],  # 2
-                      [0, 0, 1]   # 3
+                      # 1  2
+                      [1, 0],  # 1
+                      [0, 1],  # 2
                   ],
                   "resultIndicatorColorIntervals": [
                       # red       # yellow    # green     # blue      # violet
@@ -491,10 +495,6 @@ def create_prefabs():
       2, shapes.BUTTON, {"*": RESOURCE2_COLOR_DATA[0],
                          "#": RESOURCE2_COLOR_DATA[1],
                          "x": (0, 0, 0, 0)})
-  prefabs["resource_class3"] = create_resource_prefab(
-      3, shapes.BUTTON, {"*": RESOURCE3_COLOR_DATA[0],
-                         "#": RESOURCE3_COLOR_DATA[1],
-                         "x": (0, 0, 0, 0)})
   return prefabs
 
 
@@ -562,10 +562,10 @@ def get_config():
   config.action_spec = specs.action(len(ACTION_SET))
   config.timestep_spec = specs.timestep({
       "RGB": specs.rgb(40, 40),
-      "INVENTORY": specs.inventory(3),
+      "INVENTORY": specs.inventory(2),
       "READY_TO_SHOOT": specs.OBSERVATION["READY_TO_SHOOT"],
       # Debug only (do not use the following observations in policies).
-      "INTERACTION_INVENTORIES": specs.interaction_inventories(3),
+      "INTERACTION_INVENTORIES": specs.interaction_inventories(2),
       "WORLD.RGB": specs.rgb(120, 184),
   })
 

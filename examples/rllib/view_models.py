@@ -34,7 +34,7 @@ def main():
   parser.add_argument(
       "--experiment_state",
       type=str,
-      default="~/ray_results/PPO",
+      default="~/ray_results/PPO/experiment_state-2023-06-02_13-11-12.json",
       help="ray.tune experiment_state to load. The default setting will load"
       " the last training run created by self_play_train.py. If you want to use"
       " a specific run, provide a path, expected to be of the format "
@@ -52,7 +52,9 @@ def main():
       default_mode="max")
 
   config = experiment.best_config
-  checkpoint_path = experiment.best_checkpoint
+  # checkpoint_path = experiment.best_checkpoint
+  checkpoint_path = '/home/yuxin/ray_results/PPO/PPO_meltingpot_9f2b0_00000_0_2023-06-02_13-11-12/checkpoint_000010'
+  # checkpoint_path= '/home/yuxin/ray_results/PPO/PPO_meltingpot_Stag_Hunt_5M/checkpoint_000020'
 
   trainer = get_trainer_class(agent_algorithm)(config=config)
   trainer.restore(checkpoint_path)
@@ -70,7 +72,7 @@ def main():
   actions = [0] * len(bots)
 
   # Configure the pygame display
-  scale = 4
+  scale = 8
   fps = 5
 
   pygame.init()
@@ -91,6 +93,8 @@ def main():
 
     game_display.blit(surf, dest=(0, 0))
     pygame.display.update()
+    # save_name = "/home/yuxin/Downloads/"+str(_)+".jpeg"
+    # pygame.image.save(game_display, save_name)
     clock.tick(fps)
 
     for i, bot in enumerate(bots):
