@@ -142,12 +142,8 @@ def main():
   ray.init()
 
   stop = {
-<<<<<<< HEAD
       # "training_iteration": 10,
       "timesteps_total": 5000000
-=======
-      "training_iteration": 1,
->>>>>>> 4821eb7bedc3dbdb7e18d26d8471b38010f67e62
   }
 
   results = tune.Tuner(
