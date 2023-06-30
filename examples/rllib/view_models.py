@@ -46,15 +46,16 @@ def main():
 
   register_env("meltingpot", utils.env_creator)
 
+  experiment_state = '~/ray_results/PPO/experiment_state-2023-06-06_21-59-02.json'
+
   experiment = ExperimentAnalysis(
-      args.experiment_state,
+      experiment_state,
       default_metric="episode_reward_mean",
       default_mode="max")
 
   config = experiment.best_config
   # checkpoint_path = experiment.best_checkpoint
-  checkpoint_path = '/home/yuxin/ray_results/PPO/PPO_meltingpot_9f2b0_00000_0_2023-06-02_13-11-12/checkpoint_000010'
-  # checkpoint_path= '/home/yuxin/ray_results/PPO/PPO_meltingpot_Stag_Hunt_5M/checkpoint_000020'
+  checkpoint_path = '/home/yuxin/ray_results/PPO/PPO_meltingpot_05b1a_00000_0_2023-06-06_21-59-03/checkpoint_003125'
 
   trainer = get_trainer_class(agent_algorithm)(config=config)
   trainer.restore(checkpoint_path)

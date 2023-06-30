@@ -11,7 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-"""Runs an example of a self-play training experiment."""
+"""Runs an example of a population training experiment."""
 
 import os
 
@@ -20,25 +20,29 @@ from ray import air
 from ray import tune
 from ray.rllib.algorithms import ppo
 from ray.rllib.policy.policy import PolicySpec
+from ray.tune.registry import register_env
+from ray.rllib.algorithms.algorithm import Algorithm
+from ray.rllib.policy.policy import Policy
 
 from examples.rllib import utils
 from meltingpot.python import substrate
 
+import random
+
 
 def get_config(
-    substrate_name: str = "stag_hunt_in_the_matrix__repeated",
-    num_rollout_workers: int = 2,
-    rollout_fragment_length: int = 100,
-    train_batch_size: int = 1600,
-    fcnet_hiddens=(64, 64),
-    post_fcnet_hiddens=(256,),
-    lstm_cell_size: int = 256,
-    sgd_minibatch_size: int = 128,
+        substrate_name: str = "stag_hunt_in_the_matrix__repeated",
+        num_rollout_workers: int = 2,
+        rollout_fragment_length: int = 100,
+        train_batch_size: int = 1600,
+        fcnet_hiddens=(64, 64),
+        post_fcnet_hiddens=(256,),
+        lstm_cell_size: int = 256,
+        sgd_minibatch_size: int = 128,
 ):
   """Get the configuration for running an agent on a substrate using RLLib.
 
   We need the following 2 pieces to run the training:
-
   Args:
     substrate_name: The name of the MeltingPot substrate, coming from
       `substrate.AVAILABLE_SUBSTRATES`.
@@ -81,6 +85,7 @@ def get_config(
 
   # 4. Extract space dimensions
   test_env = utils.env_creator(config.env_config)
+  register_env("meltingpot", lambda env_config: utils.env_creator(config.env_config))
 
   # Setup PPO with policies, one per entry in default player roles.
   policies = {}
@@ -91,15 +96,15 @@ def get_config(
     sprite_y = rgb_shape[1] // 8
 
     policies[f"agent_{i}"] = PolicySpec(
-        policy_class=None,  # use default policy
-        observation_space=test_env.observation_space[f"player_{i}"],
-        action_space=test_env.action_space[f"player_{i}"],
-        config={
-            "model": {
-                "conv_filters": [[16, [8, 8], 8],
-                                 [128, [sprite_x, sprite_y], 1]],
-            },
-        })
+      policy_class=None,  # use default policy
+      observation_space=test_env.observation_space[f"player_{i}"],
+      action_space=test_env.action_space[f"player_{i}"],
+      config={
+        "model": {
+          "conv_filters": [[16, [8, 8], 8],
+                           [128, [sprite_x, sprite_y], 1]],
+        },
+      })
     player_to_agent[f"player_{i}"] = f"agent_{i}"
 
   def policy_mapping_fn(agent_id, **kwargs):
@@ -134,27 +139,60 @@ def get_config(
 
 
 def main():
+  # config = get_config()
 
-  config = get_config()
   tune.register_env("meltingpot", utils.env_creator)
 
   # 6. Initialize ray, train and save
   ray.init()
 
-  stop = {
-      # "training_iteration": 10,
-      "timesteps_total": 5000000
-  }
+  train_batch_size = 2
+  total_timesteps = 50
+  num_iters = total_timesteps // train_batch_size
 
-  results = tune.Tuner(
-      "PPO",
-      param_space=config.to_dict(),
-      run_config=air.RunConfig(stop=stop,
-                               checkpoint_config=air.CheckpointConfig(checkpoint_frequency=20),
-                               verbose=1),
-  ).fit()
-  print(results)
-  assert results.num_errors == 0
+  seeds = ["Seed_0", "Seed_1", "Seed_2", "Seed_3", "Seed_4"]
+  num_seeds = len(seeds)
+
+  checkpoints_dict = {}  # A dictionary of lists of checkpoints for each seed/population
+  for i in seeds:
+    checkpoints_dict[i] = []
+
+  for i in range(num_iters):
+
+    for seed in range(num_seeds):
+
+      config = get_config()
+      algo_config = config.build()
+      dummy_config = config.build()
+
+      path_to_checkpoint = algo_config.save(f"checkpoints/seed_{seed}")
+      checkpoints_dict[f"Seed_{seed}"].append(path_to_checkpoint)
+      # print("An algo_config is saved at: ", path_to_checkpoint)
+
+      # Set Player 1's policy
+      if (len(checkpoints_dict[f"Seed_{seed}"]) > 0):
+        algo_config.restore(checkpoints_dict[f"Seed_{seed}"].pop())
+
+      # Set Player 2's policy
+      swap_seed = random.randint(0, num_seeds - 1)
+      if (len(checkpoints_dict[f"Seed_{swap_seed}"]) > 0):
+        dummy_config = algo_config
+        dummy_config.restore(checkpoints_dict[f"Seed_{swap_seed}"].pop())
+        loader_opp = dummy_config.get_policy("agent_1").get_weights()
+        algo_config.get_policy("agent_1").set_weights(loader_opp)
+
+      # 7. Train
+      for _ in range(train_batch_size):
+        algo_config.train()
+
+      # 8. Save the checkpoint
+      path_to_checkpoint = algo_config.save(f"checkpoints/seed_{seed}")
+      checkpoints_dict[f"Seed_{seed}"].append(path_to_checkpoint)
+
+      # 9. Print the details about iteration and algorithm
+      print("Iteration: ", i)
+      print("Checkpoint saved at: ", path_to_checkpoint)
+      print("--------------------------------------------------")
 
 
 if __name__ == "__main__":
