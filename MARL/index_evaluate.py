@@ -31,8 +31,11 @@ def main():
   # opponent_checkpoint_list = [80, 160, 200, 580, 760, 980, 1120, 1460, 2300, 2740, 3020] # Chicken Obstacle
   # opponent_checkpoint_list = [20, 100, 160, 280, 360, 560, 700, 1240, 1280, 1340, 1360] # Chicken Medium
   # opponent_checkpoint_list = [60, 140, 200, 860, 1060, 1120, 1740, 1800, 2340, 2760, 3000] # Chicken Small
-  # opponent_checkpoint_list = [20, 140, 280, 340, 500, 600, 740, 840, 1360, 2300, 2740]  # Pure Coordination
-  # opponent_checkpoint_list = [20, 60, 220, 360, 460, 660, 700, 1900, 1960, 2560, 2640]  # Stag Hunt Large
+  # opponent_checkpoint_list = [20, 260, 360, 420, 660, 580, 820, 1120, 1700, 2480, 2940]  # Pure Coordination Large
+  # opponent_checkpoint_list = [20, 300, 420, 540, 640, 840, 1020, 1320, 1980, 2360, 3125]  # Pure Coordination Obstacle
+  # opponent_checkpoint_list = [20, 120, 180, 260, 420, 500, 560, 900, 1680, 1880, 1960]  # Pure Coordination Medium
+  opponent_checkpoint_list = [40, 220, 320, 400, 580, 700, 740, 860, 1660, 2500, 2700]  # Pure Coordination Small
+    # opponent_checkpoint_list = [20, 60, 220, 360, 460, 660, 700, 1900, 1960, 2560, 2640]  # Stag Hunt Large
   # opponent_checkpoint_list = [20, 80, 420, 500, 600, 800, 900, 1440, 1880, 2340, 2460]  # Stag Hunt Obstacle
   # opponent_checkpoint_list = [140, 180, 240, 280, 400, 660, 920, 1280, 1500, 2740, 3040]  # Stag Hunt Medium
   opponent_checkpoint_list = [20, 140, 240, 300, 380, 500, 1540, 1780, 2260, 2580, 2600]  # Stag Hunt Small

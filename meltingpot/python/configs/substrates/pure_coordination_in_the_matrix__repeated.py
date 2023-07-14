@@ -67,17 +67,46 @@ RESOURCE2_COLOR_DATA = (RESOURCE2_COLOR, RESOURCE2_HIGHLIGHT_COLOR)
 # Wn         n         nW
 # WWWWWWWWWWWWWWWWWWWWWWW
 # """
+# """
+# ASCII_MAP = """
+# WWWWWWWWWWWWW
+# Wn         nW
+# W    111    W
+# W    2a2    W
+# Wn         nW
+# W    1a1    W
+# W    222    W
+# Wn         nW
+# WWWWWWWWWWWWW
+# """
+# ASCII_MAP = """
+# WWWWWWWW
+# Wn    nW
+# W  21  W
+# W  aa  W
+# W  12  W
+# Wn    nW
+# WWWWWWWW
+# """
 ASCII_MAP = """
-WWWWWWWWWWWWW
-Wn         nW
-W    111    W
-W    2a2    W
-Wn         nW
-W    1a1    W
-W    222    W
-Wn         nW
-WWWWWWWWWWWWW
+WWWWWW
+Wn  nW
+W 21 W
+W 12 W
+Wn  nW
+WWWWWW
 """
+# ASCII_MAP = """
+# WWWWWWWWWWWWW
+# Wn    W    nW
+# W  W 111 W  W
+# W  W 2a2 W  W
+# Wn    W    nW
+# W  W 1a1 W  W
+# W  W 222 W  W
+# Wn    W    nW
+# WWWWWWWWWWWWW
+# """
 
 _resource_names = [
     "resource_class1",

@@ -22,7 +22,6 @@ from ray.rllib.algorithms.ppo import (
 )
 from ray.rllib.examples.env.multi_agent import MultiAgentCartPole
 from ray.tune.logger import pretty_print
-<<<<<<< HEAD
 from ray.tune.registry import register_env
 
 parser = argparse.ArgumentParser()
