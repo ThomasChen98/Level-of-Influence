@@ -46,7 +46,7 @@ def main():
 
   register_env("meltingpot", utils.env_creator)
 
-  experiment_state = '~/ray_results/PPO/experiment_state-2023-06-06_21-59-02.json'
+  experiment_state = '~/ray_results/PPO/experiment_state-.json'
 
   experiment = ExperimentAnalysis(
       experiment_state,
@@ -54,8 +54,8 @@ def main():
       default_mode="max")
 
   config = experiment.best_config
-  # checkpoint_path = experiment.best_checkpoint
-  checkpoint_path = '/home/yuxin/ray_results/PPO/PPO_meltingpot_05b1a_00000_0_2023-06-06_21-59-03/checkpoint_003125'
+  checkpoint_path = experiment.best_checkpoint
+#   checkpoint_path = '/home/yuxin/ray_results/PPO/PPO_meltingpot_05b1a_00000_0_2023-06-06_21-59-03/checkpoint_003125'
 
   trainer = get_trainer_class(agent_algorithm)(config=config)
   trainer.restore(checkpoint_path)
@@ -84,7 +84,7 @@ def main():
   game_display = pygame.display.set_mode(
       (int(shape[1] * scale), int(shape[0] * scale)))
 
-  for _ in range(200):
+  for _ in range(10):
     obs = timestep.observation[0]["WORLD.RGB"]
     obs = np.transpose(obs, (1, 0, 2))
     surface = pygame.surfarray.make_surface(obs)
