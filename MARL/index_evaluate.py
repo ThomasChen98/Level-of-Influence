@@ -20,22 +20,28 @@ def main():
   agent_algorithm = "PPO"
   episode_num = 50
   episode_len = 2000
-  save_name = './MARL/data/stag_hunt_L_5M'
-  experiment_state = "~/ray_results/PPO/experiment_state-Stag-Hunt-L-5M.json"
+  save_name = './MARL/data/stag_hunt_S_5M'
+  experiment_state = "~/ray_results/PPO/experiment_state-Stag-Hunt-S-5M.json"
 
-  # opponent_checkpoint_list = [20, 180, 440, 500, 660, 1480, 1880, 1980, 2020, 2040, 2080]  # Prisoners Dilemma
-  # opponent_checkpoint_list = [20, 140, 280, 560, 600, 660, 1040, 1160, 1200, 1820, 2120]  # Chicken
+  # opponent_checkpoint_list = [20, 180, 440, 500, 660, 1480, 1880, 1980, 2020, 2040, 2080]  # Prisoners Dilemma Large
+  # opponent_checkpoint_list = [20, 320, 840, 1740, 2300, 2580, 2640, 2700, 2740, 2800, 2840] # Prisoners Dilemma Obstacle
+  # opponent_checkpoint_list = [80, 180, 280, 340, 1380, 1820, 1860, 2520, 2780, 3000, 3125] # Prisoners Dilemma Medium
+  # opponent_checkpoint_list = [20, 100, 300, 480, 520, 1260, 1700, 2380, 2780, 2820, 2880]  # Prisoners Dilemma Small
+  # opponent_checkpoint_list = [20, 140, 280, 560, 600, 660, 1040, 1160, 1200, 1820, 2120]  # Chicken Large
+  # opponent_checkpoint_list = [80, 160, 200, 580, 760, 980, 1120, 1460, 2300, 2740, 3020] # Chicken Obstacle
+  # opponent_checkpoint_list = [20, 100, 160, 280, 360, 560, 700, 1240, 1280, 1340, 1360] # Chicken Medium
+  # opponent_checkpoint_list = [60, 140, 200, 860, 1060, 1120, 1740, 1800, 2340, 2760, 3000] # Chicken Small
   # opponent_checkpoint_list = [20, 140, 280, 340, 500, 600, 740, 840, 1360, 2300, 2740]  # Pure Coordination
-  opponent_checkpoint_list = [20, 60, 220, 360, 460, 660, 700, 1900, 1960, 2560, 2640]  # Stag Hunt Large
+  # opponent_checkpoint_list = [20, 60, 220, 360, 460, 660, 700, 1900, 1960, 2560, 2640]  # Stag Hunt Large
   # opponent_checkpoint_list = [20, 80, 420, 500, 600, 800, 900, 1440, 1880, 2340, 2460]  # Stag Hunt Obstacle
   # opponent_checkpoint_list = [140, 180, 240, 280, 400, 660, 920, 1280, 1500, 2740, 3040]  # Stag Hunt Medium
-  # opponent_checkpoint_list = [20, 140, 240, 300, 380, 500, 1540, 1780, 2260, 2580, 2600]  # Stag Hunt Small
+  opponent_checkpoint_list = [20, 140, 240, 300, 380, 500, 1540, 1780, 2260, 2580, 2600]  # Stag Hunt Small
 
-  ego_checkpoint = '/home/yuxin/ray_results/PPO/PPO_meltingpot_Stag_Hunt_L_5M/checkpoint_00' + str(
+  ego_checkpoint = '/home/yuxin/ray_results/PPO/PPO_meltingpot_Stag_Hunt_S_5M/checkpoint_00' + str(
     opponent_checkpoint_list[-1]).zfill(4)
   opponent_checkpoint = []
   for i in range(len(opponent_checkpoint_list)):
-    opponent_checkpoint.append('/home/yuxin/ray_results/PPO/PPO_meltingpot_Stag_Hunt_L_5M/checkpoint_00' + str(
+    opponent_checkpoint.append('/home/yuxin/ray_results/PPO/PPO_meltingpot_Stag_Hunt_S_5M/checkpoint_00' + str(
       opponent_checkpoint_list[i]).zfill(4))
 
   register_env("meltingpot", utils.env_creator)
