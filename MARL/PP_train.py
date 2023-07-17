@@ -227,7 +227,7 @@ def main():
   np.savez_compressed(save_path, timesteps=timesteps,
                       policy_reward_min=policy_reward_min,
                       policy_reward_mean=policy_reward_mean,
-                      policy_reward_max_0=policy_reward_max)
+                      policy_reward_max=policy_reward_max)
 
 if __name__ == "__main__":
   main()
