@@ -126,9 +126,9 @@ def main():
   save_path = './MARL/logs/PP_test'
   checkpoints_path = './MARL/PP_checkpoints'
   log_path = './MARL/PP_output.txt'
-  checkpoint_freq = 4
-  num_gens = 2
-  seeds = [11,22]
+  checkpoint_freq = 150
+  num_gens = 5
+  seeds = [11,22,33]
 
   gen_len = checkpoint_freq * config.train_batch_size
   num_seeds = len(seeds)
