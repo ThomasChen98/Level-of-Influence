@@ -123,11 +123,11 @@ def main():
   tune.register_env("meltingpot", utils.env_creator)
 
   # parameters
-  save_path = './MARL/logs/PP_test'
-  checkpoints_path = './MARL/PP_checkpoints'
-  log_path = './MARL/PP_output.txt'
-  checkpoint_freq = 150
-  num_gens = 5
+  save_path = './MARL/PP_logs/pp3s'
+  checkpoints_path = './MARL/PP_checkpoints/pp3s'
+  log_path = './MARL/PP_outputs/pp3s.txt'
+  checkpoint_freq = 125
+  num_gens = 25
   seeds = [11,22,33]
 
   gen_len = checkpoint_freq * config.train_batch_size
