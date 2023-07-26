@@ -1,0 +1,596 @@
+SEED 0/3 GENERATION 0/25
+[**************************************************] 125/125
+TIMESTEP 200.0K
+EPISODE REWARD MEAN 98.0628769061082
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_000/checkpoint_000125
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 0/25
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_000/checkpoint_000125
+[**************************************************] 125/125
+TIMESTEP 200.0K
+EPISODE REWARD MEAN 23.933180185249004
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_000/checkpoint_000250
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 0/25
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_000/checkpoint_000250
+[**************************************************] 125/125
+TIMESTEP 200.0K
+EPISODE REWARD MEAN 30.955699639028968
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_000/checkpoint_000375
+####################################################################################################
+SEED 0/3 GENERATION 1/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_000/checkpoint_000125
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_000/checkpoint_000375
+[**************************************************] 125/125
+TIMESTEP 400.0K
+EPISODE REWARD MEAN 34.158242643900486
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_001/checkpoint_000500
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 1/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_000/checkpoint_000250
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_001/checkpoint_000500
+[**************************************************] 125/125
+TIMESTEP 400.0K
+EPISODE REWARD MEAN 35.34779073715395
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_001/checkpoint_000625
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 1/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_000/checkpoint_000375
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_001/checkpoint_000625
+[**************************************************] 125/125
+TIMESTEP 400.0K
+EPISODE REWARD MEAN 43.70350042716127
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_001/checkpoint_000750
+####################################################################################################
+SEED 0/3 GENERATION 2/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_001/checkpoint_000500
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_001/checkpoint_000500
+[**************************************************] 125/125
+TIMESTEP 600.0K
+EPISODE REWARD MEAN 38.3192422293968
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_002/checkpoint_000625
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 2/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_001/checkpoint_000625
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_001/checkpoint_000750
+[**************************************************] 125/125
+TIMESTEP 600.0K
+EPISODE REWARD MEAN 59.1357701144393
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_002/checkpoint_000875
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 2/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_001/checkpoint_000750
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_002/checkpoint_000625
+[**************************************************] 125/125
+TIMESTEP 600.0K
+EPISODE REWARD MEAN 41.93694254018468
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_002/checkpoint_000750
+####################################################################################################
+SEED 0/3 GENERATION 3/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_002/checkpoint_000625
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_002/checkpoint_000875
+[**************************************************] 125/125
+TIMESTEP 800.0K
+EPISODE REWARD MEAN 48.24400726834142
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_003/checkpoint_001000
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 3/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_002/checkpoint_000875
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_002/checkpoint_000750
+[**************************************************] 125/125
+TIMESTEP 800.0K
+EPISODE REWARD MEAN 42.9867467291681
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_003/checkpoint_000875
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 3/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_002/checkpoint_000750
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_002/checkpoint_000750
+[**************************************************] 125/125
+TIMESTEP 800.0K
+EPISODE REWARD MEAN 43.65552129033465
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_003/checkpoint_000875
+####################################################################################################
+SEED 0/3 GENERATION 4/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_003/checkpoint_001000
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_003/checkpoint_000875
+[**************************************************] 125/125
+TIMESTEP 1000.0K
+EPISODE REWARD MEAN 39.932819306718336
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_004/checkpoint_001000
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 4/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_003/checkpoint_000875
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_004/checkpoint_001000
+[**************************************************] 125/125
+TIMESTEP 1000.0K
+EPISODE REWARD MEAN 53.85296184437352
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_004/checkpoint_001125
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 4/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_003/checkpoint_000875
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_003/checkpoint_000875
+[**************************************************] 125/125
+TIMESTEP 1000.0K
+EPISODE REWARD MEAN 41.521607377227646
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_004/checkpoint_001000
+####################################################################################################
+SEED 0/3 GENERATION 5/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_004/checkpoint_001000
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_004/checkpoint_001000
+[**************************************************] 125/125
+TIMESTEP 1200.0K
+EPISODE REWARD MEAN 48.929661262075435
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_005/checkpoint_001125
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 5/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_004/checkpoint_001125
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_005/checkpoint_001125
+[**************************************************] 125/125
+TIMESTEP 1200.0K
+EPISODE REWARD MEAN 59.64445278759132
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_005/checkpoint_001250
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 5/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_004/checkpoint_001000
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_004/checkpoint_001000
+[**************************************************] 125/125
+TIMESTEP 1200.0K
+EPISODE REWARD MEAN 54.822080895549334
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_005/checkpoint_001125
+####################################################################################################
+SEED 0/3 GENERATION 6/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_005/checkpoint_001125
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_005/checkpoint_001250
+[**************************************************] 125/125
+TIMESTEP 1400.0K
+EPISODE REWARD MEAN 55.32692170826121
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_006/checkpoint_001375
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 6/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_005/checkpoint_001250
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_006/checkpoint_001375
+[**************************************************] 125/125
+TIMESTEP 1400.0K
+EPISODE REWARD MEAN 36.38765735676003
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_006/checkpoint_001500
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 6/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_005/checkpoint_001125
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_006/checkpoint_001500
+[**************************************************] 125/125
+TIMESTEP 1400.0K
+EPISODE REWARD MEAN 36.155789255200574
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_006/checkpoint_001625
+####################################################################################################
+SEED 0/3 GENERATION 7/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_006/checkpoint_001375
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_006/checkpoint_001375
+[**************************************************] 125/125
+TIMESTEP 1600.0K
+EPISODE REWARD MEAN 39.86731693190449
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_007/checkpoint_001500
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 7/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_006/checkpoint_001500
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_006/checkpoint_001625
+[**************************************************] 125/125
+TIMESTEP 1600.0K
+EPISODE REWARD MEAN 45.51026533993503
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_007/checkpoint_001750
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 7/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_006/checkpoint_001625
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_007/checkpoint_001500
+[**************************************************] 125/125
+TIMESTEP 1600.0K
+EPISODE REWARD MEAN 49.74714055237349
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_007/checkpoint_001625
+####################################################################################################
+SEED 0/3 GENERATION 8/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_007/checkpoint_001500
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_007/checkpoint_001750
+[**************************************************] 125/125
+TIMESTEP 1800.0K
+EPISODE REWARD MEAN 52.66885829329524
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_008/checkpoint_001875
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 8/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_007/checkpoint_001750
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_008/checkpoint_001875
+[**************************************************] 125/125
+TIMESTEP 1800.0K
+EPISODE REWARD MEAN 51.94068090784068
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_008/checkpoint_002000
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 8/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_007/checkpoint_001625
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_008/checkpoint_002000
+[**************************************************] 125/125
+TIMESTEP 1800.0K
+EPISODE REWARD MEAN 53.71026189776817
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_008/checkpoint_002125
+####################################################################################################
+SEED 0/3 GENERATION 9/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_008/checkpoint_001875
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_008/checkpoint_002000
+[**************************************************] 125/125
+TIMESTEP 2000.0K
+EPISODE REWARD MEAN 62.3575069664742
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_009/checkpoint_002125
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 9/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_008/checkpoint_002000
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_008/checkpoint_002000
+[**************************************************] 125/125
+TIMESTEP 2000.0K
+EPISODE REWARD MEAN 57.839857646769545
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_009/checkpoint_002125
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 9/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_008/checkpoint_002125
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_009/checkpoint_002125
+[**************************************************] 125/125
+TIMESTEP 2000.0K
+EPISODE REWARD MEAN 44.334993412459845
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_009/checkpoint_002250
+####################################################################################################
+SEED 0/3 GENERATION 10/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_009/checkpoint_002125
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_009/checkpoint_002125
+[**************************************************] 125/125
+TIMESTEP 2200.0K
+EPISODE REWARD MEAN 49.543833270723105
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_010/checkpoint_002250
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 10/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_009/checkpoint_002125
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_010/checkpoint_002250
+[**************************************************] 125/125
+TIMESTEP 2200.0K
+EPISODE REWARD MEAN 58.01677341188423
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_010/checkpoint_002375
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 10/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_009/checkpoint_002250
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_010/checkpoint_002250
+[**************************************************] 125/125
+TIMESTEP 2200.0K
+EPISODE REWARD MEAN 53.02512589051947
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_010/checkpoint_002375
+####################################################################################################
+SEED 0/3 GENERATION 11/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_010/checkpoint_002250
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_010/checkpoint_002375
+[**************************************************] 125/125
+TIMESTEP 2400.0K
+EPISODE REWARD MEAN 59.96498329499925
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_011/checkpoint_002500
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 11/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_010/checkpoint_002375
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_011/checkpoint_002500
+[**************************************************] 125/125
+TIMESTEP 2400.0K
+EPISODE REWARD MEAN 55.628618981880265
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_011/checkpoint_002625
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 11/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_010/checkpoint_002375
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_011/checkpoint_002500
+[**************************************************] 125/125
+TIMESTEP 2400.0K
+EPISODE REWARD MEAN 40.754070607010384
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_011/checkpoint_002625
+####################################################################################################
+SEED 0/3 GENERATION 12/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_011/checkpoint_002500
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_011/checkpoint_002625
+[**************************************************] 125/125
+TIMESTEP 2600.0K
+EPISODE REWARD MEAN 41.302467234364975
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_012/checkpoint_002750
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 12/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_011/checkpoint_002625
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_011/checkpoint_002625
+[**************************************************] 125/125
+TIMESTEP 2600.0K
+EPISODE REWARD MEAN 48.160493522773216
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_012/checkpoint_002750
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 12/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_011/checkpoint_002625
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_012/checkpoint_002750
+[**************************************************] 125/125
+TIMESTEP 2600.0K
+EPISODE REWARD MEAN 57.71132942364309
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_012/checkpoint_002875
+####################################################################################################
+SEED 0/3 GENERATION 13/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_012/checkpoint_002750
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_012/checkpoint_002750
+[**************************************************] 125/125
+TIMESTEP 2800.0K
+EPISODE REWARD MEAN 58.38906016151548
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_013/checkpoint_002875
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 13/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_012/checkpoint_002750
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_012/checkpoint_002875
+[**************************************************] 125/125
+TIMESTEP 2800.0K
+EPISODE REWARD MEAN 57.81894145558055
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_013/checkpoint_003000
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 13/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_012/checkpoint_002875
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_012/checkpoint_002875
+[**************************************************] 125/125
+TIMESTEP 2800.0K
+EPISODE REWARD MEAN 53.79200331684408
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_013/checkpoint_003000
+####################################################################################################
+SEED 0/3 GENERATION 14/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_013/checkpoint_002875
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_013/checkpoint_003000
+[**************************************************] 125/125
+TIMESTEP 3000.0K
+EPISODE REWARD MEAN 39.67287300435787
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_014/checkpoint_003125
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 14/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_013/checkpoint_003000
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_013/checkpoint_003000
+[**************************************************] 125/125
+TIMESTEP 3000.0K
+EPISODE REWARD MEAN 40.60745958541881
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_014/checkpoint_003125
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 14/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_013/checkpoint_003000
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_014/checkpoint_003125
+[**************************************************] 125/125
+TIMESTEP 3000.0K
+EPISODE REWARD MEAN 58.56503535158924
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_014/checkpoint_003250
+####################################################################################################
+SEED 0/3 GENERATION 15/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_014/checkpoint_003125
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_014/checkpoint_003250
+[**************************************************] 125/125
+TIMESTEP 3200.0K
+EPISODE REWARD MEAN 65.26671723648961
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_015/checkpoint_003375
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 15/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_014/checkpoint_003125
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_014/checkpoint_003125
+[**************************************************] 125/125
+TIMESTEP 3200.0K
+EPISODE REWARD MEAN 50.72631606474097
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_015/checkpoint_003250
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 15/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_014/checkpoint_003250
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_015/checkpoint_003375
+[**************************************************] 125/125
+TIMESTEP 3200.0K
+EPISODE REWARD MEAN 65.61701884388827
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_015/checkpoint_003500
+####################################################################################################
+SEED 0/3 GENERATION 16/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_015/checkpoint_003375
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_015/checkpoint_003250
+[**************************************************] 125/125
+TIMESTEP 3400.0K
+EPISODE REWARD MEAN 62.0301692039183
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_016/checkpoint_003375
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 16/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_015/checkpoint_003250
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_016/checkpoint_003375
+[**************************************************] 125/125
+TIMESTEP 3400.0K
+EPISODE REWARD MEAN 55.47560566993736
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_016/checkpoint_003500
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 16/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_015/checkpoint_003500
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_015/checkpoint_003500
+[**************************************************] 125/125
+TIMESTEP 3400.0K
+EPISODE REWARD MEAN 68.27394804334054
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_016/checkpoint_003625
+####################################################################################################
+SEED 0/3 GENERATION 17/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_016/checkpoint_003375
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_016/checkpoint_003625
+[**************************************************] 125/125
+TIMESTEP 3600.0K
+EPISODE REWARD MEAN 70.25694397282156
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_017/checkpoint_003750
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 17/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_016/checkpoint_003500
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_016/checkpoint_003500
+[**************************************************] 125/125
+TIMESTEP 3600.0K
+EPISODE REWARD MEAN 54.80935628672643
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_017/checkpoint_003625
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 17/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_016/checkpoint_003625
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_017/checkpoint_003750
+[**************************************************] 125/125
+TIMESTEP 3600.0K
+EPISODE REWARD MEAN 64.37412174740693
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_017/checkpoint_003875
+####################################################################################################
+SEED 0/3 GENERATION 18/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_017/checkpoint_003750
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_017/checkpoint_003625
+[**************************************************] 125/125
+TIMESTEP 3800.0K
+EPISODE REWARD MEAN 46.90094176126907
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_018/checkpoint_003750
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 18/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_017/checkpoint_003625
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_017/checkpoint_003875
+[**************************************************] 125/125
+TIMESTEP 3800.0K
+EPISODE REWARD MEAN 76.41502167297541
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_018/checkpoint_004000
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 18/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_017/checkpoint_003875
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_018/checkpoint_004000
+[**************************************************] 125/125
+TIMESTEP 3800.0K
+EPISODE REWARD MEAN 63.899918908930864
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_018/checkpoint_004125
+####################################################################################################
+SEED 0/3 GENERATION 19/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_018/checkpoint_003750
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_018/checkpoint_004000
+[**************************************************] 125/125
+TIMESTEP 4000.0K
+EPISODE REWARD MEAN 54.93803467490554
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_019/checkpoint_004125
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 19/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_018/checkpoint_004000
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_018/checkpoint_004125
+[**************************************************] 125/125
+TIMESTEP 4000.0K
+EPISODE REWARD MEAN 61.085728386277246
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_019/checkpoint_004250
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 19/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_018/checkpoint_004125
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_018/checkpoint_004125
+[**************************************************] 125/125
+TIMESTEP 4000.0K
+EPISODE REWARD MEAN 50.433113679508004
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_019/checkpoint_004250
+####################################################################################################
+SEED 0/3 GENERATION 20/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_019/checkpoint_004125
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_019/checkpoint_004250
+[**************************************************] 125/125
+TIMESTEP 4200.0K
+EPISODE REWARD MEAN 55.607521823485506
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_020/checkpoint_004375
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 20/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_019/checkpoint_004250
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_019/checkpoint_004250
+[**************************************************] 125/125
+TIMESTEP 4200.0K
+EPISODE REWARD MEAN 51.82194358855517
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_020/checkpoint_004375
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 20/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_019/checkpoint_004250
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_020/checkpoint_004375
+[**************************************************] 125/125
+TIMESTEP 4200.0K
+EPISODE REWARD MEAN 51.8928568248609
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_020/checkpoint_004500
+####################################################################################################
+SEED 0/3 GENERATION 21/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_020/checkpoint_004375
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_020/checkpoint_004375
+[**************************************************] 125/125
+TIMESTEP 4400.0K
+EPISODE REWARD MEAN 61.5128095742377
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_021/checkpoint_004500
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 21/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_020/checkpoint_004375
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_020/checkpoint_004375
+[**************************************************] 125/125
+TIMESTEP 4400.0K
+EPISODE REWARD MEAN 57.52725796319662
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_021/checkpoint_004500
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 21/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_020/checkpoint_004500
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_021/checkpoint_004500
+[**************************************************] 125/125
+TIMESTEP 4400.0K
+EPISODE REWARD MEAN 62.8181992889696
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_021/checkpoint_004625
+####################################################################################################
+SEED 0/3 GENERATION 22/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_021/checkpoint_004500
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_021/checkpoint_004500
+[**************************************************] 125/125
+TIMESTEP 4600.0K
+EPISODE REWARD MEAN 71.41850689634211
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_022/checkpoint_004625
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 22/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_021/checkpoint_004500
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_022/checkpoint_004625
+[**************************************************] 125/125
+TIMESTEP 4600.0K
+EPISODE REWARD MEAN 47.85408292329473
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_022/checkpoint_004750
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 22/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_021/checkpoint_004625
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_022/checkpoint_004750
+[**************************************************] 125/125
+TIMESTEP 4600.0K
+EPISODE REWARD MEAN 64.0779725356222
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_022/checkpoint_004875
+####################################################################################################
+SEED 0/3 GENERATION 23/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_022/checkpoint_004625
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_022/checkpoint_004750
+[**************************************************] 125/125
+TIMESTEP 4800.0K
+EPISODE REWARD MEAN 54.25315730932062
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_023/checkpoint_004875
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 23/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_022/checkpoint_004750
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_023/checkpoint_004875
+[**************************************************] 125/125
+TIMESTEP 4800.0K
+EPISODE REWARD MEAN 44.8021119237087
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_023/checkpoint_005000
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 23/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_022/checkpoint_004875
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_023/checkpoint_004875
+[**************************************************] 125/125
+TIMESTEP 4800.0K
+EPISODE REWARD MEAN 51.340404064750636
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_023/checkpoint_005000
+####################################################################################################
+SEED 0/3 GENERATION 24/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_023/checkpoint_004875
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_023/checkpoint_004875
+[**************************************************] 125/125
+TIMESTEP 5000.0K
+EPISODE REWARD MEAN 54.85861940551912
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_024/checkpoint_005000
+----------------------------------------------------------------------------------------------------
+SEED 1/3 GENERATION 24/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_023/checkpoint_005000
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_024/checkpoint_005000
+[**************************************************] 125/125
+TIMESTEP 5000.0K
+EPISODE REWARD MEAN 75.87034151344874
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_1/gen_024/checkpoint_005125
+----------------------------------------------------------------------------------------------------
+SEED 2/3 GENERATION 24/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_023/checkpoint_005000
+Load player 1 policy from /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_0/gen_024/checkpoint_005000
+[**************************************************] 125/125
+TIMESTEP 5000.0K
+EPISODE REWARD MEAN 71.42165959359785
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/PP_checkpoints/c3s/seed_2/gen_024/checkpoint_005125
+####################################################################################################
