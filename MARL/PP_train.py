@@ -12,7 +12,7 @@ from examples.rllib import utils
 from meltingpot.python import substrate
 
 def get_config(
-    substrate_name: str = "pure_coordination_in_the_matrix__repeated",
+    substrate_name: str = "chicken_in_the_matrix__repeated",
     num_rollout_workers: int = 2,
     rollout_fragment_length: int = 100,
     train_batch_size: int = 1600,
@@ -123,9 +123,9 @@ def main():
   tune.register_env("meltingpot", utils.env_creator)
 
   # parameters
-  save_path = './MARL/PP_logs/pp3s'
-  checkpoints_path = './MARL/PP_checkpoints/pp3s'
-  log_path = './MARL/PP_outputs/pp3s.txt'
+  save_path = './MARL/PP_logs/c3l'
+  checkpoints_path = './MARL/PP_checkpoints/c3l'
+  log_path = './MARL/PP_outputs/c3l.txt'
   checkpoint_freq = 125
   num_gens = 25
   seeds = [11,22,33]
