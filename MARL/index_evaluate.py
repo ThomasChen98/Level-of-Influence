@@ -20,7 +20,7 @@ def main():
   agent_algorithm = "PPO"
   episode_num = 50
   episode_len = 2000
-  save_name = './MARL/data/pure_coordination_S_5M'
+  save_name = './MARL/index_data/pure_coordination_S_5M'
   experiment_state = "~/ray_results/PPO/experiment_state-pure_coordination_S_5M.json"
 
   # opponent_checkpoint_list = [20, 180, 440, 500, 660, 1480, 1880, 1980, 2020, 2040, 2080]  # Prisoners Dilemma Large
