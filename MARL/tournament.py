@@ -19,19 +19,21 @@ from examples.rllib import utils
 
 def main():
   agent_algorithm = "PPO"
-  episode_num = 50
+  episode_num = 20
   episode_len = 2000
-  save_name_list = ['./MARL/tournament_data/chicken_L_PP3',
-                    './MARL/tournament_data/pure_coordination_L_PP3',
-                    './MARL/tournament_data/prisoners_dilemma_L_PP3',
-                    './MARL/tournament_data/stag_hunt_L_PP3']
-  experiment_state_list = ['~/ray_results/PPO/experiment_state-chicken_L_5M.json',
-                           '~/ray_results/PPO/experiment_state-pure_coordination_L_5M.json',
-                           '~/ray_results/PPO/experiment_state-prisoners_dilemma_L_5M.json',
-                           '~/ray_results/PPO/experiment_state-stag_hunt_L_5M.json']
-  ego_name_list = ['c3l','pc3l','pd3l','sh3l']
-  opponent_name_list = ['c_l','pc_l','pd_l','sh_l']
-  for _ in range(4):
+  save_name_list = ['./MARL/tournament_data/chicken_O_PP3',
+                    './MARL/tournament_data/pure_coordination_O_PP3']
+  # save_name_list = ['./MARL/tournament_data/prisoners_dilemma_O_PP3',
+  #                   './MARL/tournament_data/stag_hunt_O_PP3']
+  experiment_state_list = ['~/ray_results/PPO/experiment_state-chicken_O_5M.json',
+                           '~/ray_results/PPO/experiment_state-pure_coordination_O_5M.json']
+  # experiment_state_list = ['~/ray_results/PPO/experiment_state-prisoners_dilemma_O_5M.json',
+  #                          '~/ray_results/PPO/experiment_state-stag_hunt_O_5M.json']
+  ego_name_list = ['c3o','pc3o']
+  # ego_name_list = ['pd3o','sh3o']
+  opponent_name_list = ['c_o','pc_o']
+  # opponent_name_list = ['pd_o','sh_o']
+  for _ in range(2):
     save_name = save_name_list[_]
     experiment_state = experiment_state_list[_]
     ego_name = ego_name_list[_]
