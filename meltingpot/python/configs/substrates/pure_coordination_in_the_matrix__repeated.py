@@ -79,23 +79,23 @@ RESOURCE2_COLOR_DATA = (RESOURCE2_COLOR, RESOURCE2_HIGHLIGHT_COLOR)
 # Wn         nW
 # WWWWWWWWWWWWW
 # """
-# ASCII_MAP = """
-# WWWWWWWW
-# Wn    nW
-# W  21  W
-# W  aa  W
-# W  12  W
-# Wn    nW
-# WWWWWWWW
-# """
 ASCII_MAP = """
-WWWWWW
-Wn  nW
-W 21 W
-W 12 W
-Wn  nW
-WWWWWW
+WWWWWWWW
+Wn    nW
+W  21  W
+W  aa  W
+W  12  W
+Wn    nW
+WWWWWWWW
 """
+# ASCII_MAP = """
+# WWWWWW
+# Wn  nW
+# W 21 W
+# W 12 W
+# Wn  nW
+# WWWWWW
+# """
 # ASCII_MAP = """
 # WWWWWWWWWWWWW
 # Wn    W    nW
