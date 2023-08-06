@@ -1,32 +1,18 @@
-# Copyright 2020 DeepMind Technologies Limited.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     https://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-"""Runs an example of a self-play training experiment."""
-
+import glob
 import os
-
+import shutil
 import ray
-from ray import air
+import numpy as np
 from ray import tune
 from ray.rllib.algorithms import ppo
 from ray.rllib.policy.policy import PolicySpec
-
+from ray.rllib.algorithms.ppo import PPO
+import random
 from examples.rllib import utils
 from meltingpot.python import substrate
 
-
 def get_config(
-    substrate_name: str = "chicken_in_the_matrix__repeated",
+    substrate_name: str = "prisoners_dilemma_in_the_matrix__repeated",
     num_rollout_workers: int = 2,
     rollout_fragment_length: int = 100,
     train_batch_size: int = 1600,
@@ -34,6 +20,7 @@ def get_config(
     post_fcnet_hiddens=(256,),
     lstm_cell_size: int = 256,
     sgd_minibatch_size: int = 128,
+    
 ):
   """Get the configuration for running an agent on a substrate using RLLib.
 
@@ -91,15 +78,15 @@ def get_config(
     sprite_y = rgb_shape[1] // 8
 
     policies[f"agent_{i}"] = PolicySpec(
-        policy_class=None,  # use default policy
-        observation_space=test_env.observation_space[f"player_{i}"],
-        action_space=test_env.action_space[f"player_{i}"],
-        config={
-            "model": {
-                "conv_filters": [[16, [8, 8], 8],
-                                 [128, [sprite_x, sprite_y], 1]],
-            },
-        })
+      policy_class=None,  # use default policy
+      observation_space=test_env.observation_space[f"player_{i}"],
+      action_space=test_env.action_space[f"player_{i}"],
+      config={
+        "model": {
+          "conv_filters": [[16, [8, 8], 8],
+                           [128, [sprite_x, sprite_y], 1]],
+        },
+      })
     player_to_agent[f"player_{i}"] = f"agent_{i}"
 
   def policy_mapping_fn(agent_id, **kwargs):
@@ -107,7 +94,7 @@ def get_config(
     return player_to_agent[agent_id]
 
   # 5. Configuration for multi-agent setup with one policy per role:
-  config.multi_agent(policies=policies, policy_mapping_fn=policy_mapping_fn)
+  config.multi_agent(policies=policies, policy_mapping_fn=policy_mapping_fn, policies_to_train=["agent_0"])
 
   # 6. Set the agent architecture.
   # Definition of the model architecture.
@@ -132,30 +119,116 @@ def get_config(
 
   return config
 
-
 def main():
-
   config = get_config()
   tune.register_env("meltingpot", utils.env_creator)
 
-  # 6. Initialize ray, train and save
+  # parameters
+  save_path = '/home/yuxin/meltingpot/MARL/SP_logs/pd5s'
+  checkpoints_path = '/home/yuxin/meltingpot/MARL/SP_checkpoints/pd5s'
+  log_path = '/home/yuxin/meltingpot/MARL/SP_outputs/pd5s.txt'
+  checkpoint_freq = 125
+  num_gens = 25
+  seeds = [11, 22, 33, 44, 55]
+
+  gen_len = checkpoint_freq * config.train_batch_size
+  num_seeds = len(seeds)
+
+  # clear output
+  f = open(log_path, "w")
+  f.close()
+
+  # Initialize ray, train and save
   ray.init()
 
-  stop = {
-      # "training_iteration": 10,
-      "timesteps_total": 5000000
-  }
+  # logging
+  timesteps = [[] for j in range(num_seeds)]
+  policy_reward_min = [[[] for i in range(2)] for j in range(num_seeds)]
+  policy_reward_mean = [[[] for i in range(2)] for j in range(num_seeds)]
+  policy_reward_max = [[[] for i in range(2)] for j in range(num_seeds)]
 
-  results = tune.Tuner(
-      "PPO",
-      param_space=config.to_dict(),
-      run_config=air.RunConfig(stop=stop,
-                               checkpoint_config=air.CheckpointConfig(checkpoint_frequency=20),
-                               verbose=1),
-  ).fit()
-  print(results)
-  assert results.num_errors == 0
+  # A dictionary of lists of checkpoints for each seed/population
 
+  for f in os.scandir(checkpoints_path):
+    if f.is_dir():
+      shutil.rmtree(f)
+  checkpoints_dict = {}
+  for seed in range(num_seeds):
+    checkpoints_dict[f'Seed_{seed}'] = []
+
+  for gen in range(num_gens):
+    for seed in range(num_seeds):
+      # config.env_config["seed"] = seeds[seed]
+      ppo = PPO(config=config.to_dict())
+
+      with open(log_path, "a") as f:
+        f.write(f'SEED {seed}/{num_seeds} GENERATION {gen}/{num_gens}\n')
+        f.close()
+
+      # Set Player 0's policy
+      if (len(checkpoints_dict[f"Seed_{seed}"]) > 0):
+        with open(log_path, "a") as f:
+          f.write('Load player 0 policy from '+checkpoints_dict[f"Seed_{seed}"][-1]+'\n')
+          f.close()
+        ppo.restore(checkpoints_dict[f"Seed_{seed}"][-1])  # This would write both the weights of agent_0 and agent_1 from its own seed
+
+      # Set Player 1's policy
+      opp_seed = seed
+      if (len(checkpoints_dict[f"Seed_{opp_seed}"]) > 0):
+        with open(log_path, "a") as f:
+          f.write('Load player 1 policy from ' + checkpoints_dict[f"Seed_{opp_seed}"][-1] + '\n')
+          f.close()
+        ppo_dummy = ppo
+        ppo_dummy.restore(checkpoints_dict[f"Seed_{opp_seed}"][-1])
+        opp_weights = ppo_dummy.get_policy("agent_0").get_weights()
+        ppo.set_weights({"agent_1": opp_weights})  # This would overwrite the weights of agent_1 with agent_0's weight from the other seed
+
+      # Train the agent for checkpoint_freq times before saving the checkpoint
+      with open(log_path, "a") as f:
+        f.write('['+'.'*50+']'+f' 0/{checkpoint_freq}\n')
+        f.close()
+      for j in range(checkpoint_freq):
+        # train policy 0
+        results = ppo.train()
+        # log
+        with open(log_path, "r") as f:
+          lines = f.readlines()[:-1]
+          stars = int(50*(j+1)/checkpoint_freq)
+          lines.append('[' + '*' * stars + '.' * (50-stars) + ']' + f' {j+1}/{checkpoint_freq}\n')
+          f.close()
+        with open(log_path, "w") as f:
+          f.writelines(lines)
+        f.close()
+        # save results
+        timesteps[seed].append(gen * gen_len + results["timesteps_total"])
+        policy_reward_min[seed][0].append(results["policy_reward_min"]["agent_0"] if results["policy_reward_min"] else float('NaN'))
+        policy_reward_min[seed][1].append(results["policy_reward_min"]["agent_1"] if results["policy_reward_min"] else float('NaN'))
+        policy_reward_mean[seed][0].append(results["policy_reward_mean"]["agent_0"] if results["policy_reward_mean"] else float('NaN'))
+        policy_reward_mean[seed][1].append(results["policy_reward_mean"]["agent_1"] if results["policy_reward_mean"] else float('NaN'))
+        policy_reward_max[seed][0].append(results["policy_reward_max"]["agent_0"] if results["policy_reward_max"] else float('NaN'))
+        policy_reward_max[seed][1].append(results["policy_reward_max"]["agent_1"] if results["policy_reward_max"] else float('NaN'))
+
+      # Save the checkpoint
+      path_to_checkpoint = ppo.save(f"{checkpoints_path}/seed_{seed}/gen_{str(gen).zfill(3)}")
+      checkpoints_dict[f"Seed_{seed}"].append(path_to_checkpoint)
+
+      # Print results
+      with open(log_path, "a") as f:
+        # f.write(f'REWARD {policy_reward_mean[seed]}\n')
+        f.write(f'TIMESTEP {(gen * gen_len + results["timesteps_total"])/1000}K\n')
+        f.write(f'EPISODE REWARD MEAN {results["episode_reward_mean"]}\n')
+        f.write(f'CHECKPOINT PATH {path_to_checkpoint}\n')
+        if seed == num_seeds-1:
+          f.write('#' * 100 + '\n')
+        else:
+          f.write('-' * 100 + '\n')
+        f.close()
+
+  # Save logging
+  np.savez_compressed(save_path, timesteps=timesteps,
+                      policy_reward_min=policy_reward_min,
+                      policy_reward_mean=policy_reward_mean,
+                      policy_reward_max=policy_reward_max)
 
 if __name__ == "__main__":
   main()
