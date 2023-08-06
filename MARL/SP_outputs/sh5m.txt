@@ -463,4 +463,28 @@ CHECKPOINT PATH /home/yuxin/meltingpot/MARL/SP_checkpoints/sh5m/seed_3/gen_011/c
 SEED 4/5 GENERATION 11/25
 Load player 0 policy from /home/yuxin/meltingpot/MARL/SP_checkpoints/sh5m/seed_4/gen_010/checkpoint_001375
 Load player 1 policy from /home/yuxin/meltingpot/MARL/SP_checkpoints/sh5m/seed_4/gen_010/checkpoint_001375
-[************......................................] 32/125
+[**************************************************] 125/125
+TIMESTEP 2400.0K
+EPISODE REWARD MEAN 119.92388632133505
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/SP_checkpoints/sh5m/seed_4/gen_011/checkpoint_001500
+####################################################################################################
+SEED 0/5 GENERATION 12/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/SP_checkpoints/sh5m/seed_0/gen_011/checkpoint_001500
+Load player 1 policy from /home/yuxin/meltingpot/MARL/SP_checkpoints/sh5m/seed_0/gen_011/checkpoint_001500
+[**************************************************] 125/125
+TIMESTEP 2600.0K
+EPISODE REWARD MEAN 119.17186679805856
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/SP_checkpoints/sh5m/seed_0/gen_012/checkpoint_001625
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 12/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/SP_checkpoints/sh5m/seed_1/gen_011/checkpoint_001500
+Load player 1 policy from /home/yuxin/meltingpot/MARL/SP_checkpoints/sh5m/seed_1/gen_011/checkpoint_001500
+[**************************************************] 125/125
+TIMESTEP 2600.0K
+EPISODE REWARD MEAN 97.09207143385714
+CHECKPOINT PATH /home/yuxin/meltingpot/MARL/SP_checkpoints/sh5m/seed_1/gen_012/checkpoint_001625
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 12/25
+Load player 0 policy from /home/yuxin/meltingpot/MARL/SP_checkpoints/sh5m/seed_2/gen_011/checkpoint_001500
+Load player 1 policy from /home/yuxin/meltingpot/MARL/SP_checkpoints/sh5m/seed_2/gen_011/checkpoint_001500
+[******************************************........] 107/125
