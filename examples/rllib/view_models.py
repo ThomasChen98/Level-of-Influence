@@ -46,7 +46,7 @@ def main():
 
   register_env("meltingpot", utils.env_creator)
 
-  experiment_state = '/home/yuxin/ray_results/PPO/experiment_state-Stag-Hunt-O-5M.json'
+  experiment_state = '/home/yuxin/ray_results/PPO/experiment_state-stag_hunt_O_5M.json'
 
   experiment = ExperimentAnalysis(
       experiment_state,
@@ -55,7 +55,7 @@ def main():
 
   config = experiment.best_config
   # checkpoint_path = experiment.best_checkpoint
-  checkpoint_path = '/home/yuxin/ray_results/PPO/PPO_meltingpot_Stag_Hunt_O_5M/checkpoint_003125'
+  checkpoint_path = '/home/yuxin/ray_results/PPO/PPO_meltingpot_stag_hunt_O_5M/checkpoint_003125'
 
   trainer = get_trainer_class(agent_algorithm)(config=config)
   trainer.restore(checkpoint_path)
@@ -84,7 +84,7 @@ def main():
   game_display = pygame.display.set_mode(
       (int(shape[1] * scale), int(shape[0] * scale)))
 
-  for _ in range(10):
+  for _ in range(100):
     obs = timestep.observation[0]["WORLD.RGB"]
     obs = np.transpose(obs, (1, 0, 2))
     surface = pygame.surfarray.make_surface(obs)

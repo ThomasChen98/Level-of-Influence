@@ -12,7 +12,7 @@ from examples.rllib import utils
 from meltingpot.python import substrate
 
 def get_config(
-    substrate_name: str = "stag_hunt_in_the_matrix__repeated",
+    substrate_name: str = "chicken_in_the_matrix__repeated_medium",
     num_rollout_workers: int = 2,
     rollout_fragment_length: int = 100,
     train_batch_size: int = 1600,
@@ -124,12 +124,13 @@ def main():
   tune.register_env("meltingpot", utils.env_creator)
 
   # parameters
-  save_path = '/home/yuxin/meltingpot/MARL/SP_logs/sh5m'
-  checkpoints_path = '/home/yuxin/meltingpot/MARL/SP_checkpoints/sh5m'
-  log_path = '/home/yuxin/meltingpot/MARL/SP_outputs/sh5m.txt'
-  checkpoint_freq = 125
-  num_gens = 25
+  save_path = '/home/yuxin/meltingpot/MARL/SP_logs/c5m'
+  checkpoints_path = '/home/yuxin/meltingpot/MARL/SP_checkpoints/c5m'
+  log_path = '/home/yuxin/meltingpot/MARL/SP_outputs/c5m.txt'
+  checkpoint_freq = 5
+  num_gens = 5
   seeds = [11, 22, 33, 44, 55]
+  starting_timestep = 0
 
   gen_len = checkpoint_freq * config.train_batch_size
   num_seeds = len(seeds)
@@ -200,7 +201,7 @@ def main():
           f.writelines(lines)
         f.close()
         # save results
-        timesteps[seed].append(gen * gen_len + results["timesteps_total"])
+        timesteps[seed].append(gen * gen_len + results["timesteps_total"]+starting_timestep)
         policy_reward_min[seed][0].append(results["policy_reward_min"]["agent_0"] if results["policy_reward_min"] else float('NaN'))
         policy_reward_min[seed][1].append(results["policy_reward_min"]["agent_1"] if results["policy_reward_min"] else float('NaN'))
         policy_reward_mean[seed][0].append(results["policy_reward_mean"]["agent_0"] if results["policy_reward_mean"] else float('NaN'))
@@ -224,11 +225,11 @@ def main():
           f.write('-' * 100 + '\n')
         f.close()
 
-  # Save logging
-  np.savez_compressed(save_path, timesteps=timesteps,
-                      policy_reward_min=policy_reward_min,
-                      policy_reward_mean=policy_reward_mean,
-                      policy_reward_max=policy_reward_max)
+    # Save logging
+    np.savez_compressed(save_path, timesteps=timesteps,
+                        policy_reward_min=policy_reward_min,
+                        policy_reward_mean=policy_reward_mean,
+                        policy_reward_max=policy_reward_max)
 
 if __name__ == "__main__":
   main()

@@ -32,7 +32,7 @@ from examples.rllib import utils
 from meltingpot.python import substrate
 
 def get_config(
-    substrate_name: str = "stag_hunt_in_the_matrix__repeated_small",
+    substrate_name: str = "stag_hunt_in_the_matrix__repeated",
     num_rollout_workers: int = 2,
     rollout_fragment_length: int = 100,
     train_batch_size: int = 1600,

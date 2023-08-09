@@ -223,11 +223,11 @@ def main():
           f.write('-' * 100 + '\n')
         f.close()
 
-  # Save logging
-  np.savez_compressed(save_path, timesteps=timesteps,
-                      policy_reward_min=policy_reward_min,
-                      policy_reward_mean=policy_reward_mean,
-                      policy_reward_max=policy_reward_max)
+    # Save logging
+    np.savez_compressed(save_path, timesteps=timesteps,
+                        policy_reward_min=policy_reward_min,
+                        policy_reward_mean=policy_reward_mean,
+                        policy_reward_max=policy_reward_max)
 
 if __name__ == "__main__":
   main()
