@@ -12,7 +12,7 @@ from examples.rllib import utils
 from meltingpot.python import substrate
 
 def get_config(
-    substrate_name: str = "prisoners_dilemma_in_the_matrix__repeated_obstacle",
+    substrate_name: str = "chicken_in_the_matrix__repeated_large",
     num_rollout_workers: int = 2,
     rollout_fragment_length: int = 100,
     train_batch_size: int = 1600,
@@ -124,15 +124,15 @@ def main():
   tune.register_env("meltingpot", utils.env_creator)
 
   # parameters
-  save_path = '/home/yuxin/meltingpot/MARL/SP_logs/pd5o'
-  checkpoints_path = '/home/yuxin/meltingpot/MARL/SP_checkpoints/pd5o'
-  log_path = '/home/yuxin/meltingpot/MARL/SP_outputs/pd5o.txt'
+  save_path = '/home/yuxin/meltingpot/MARL/SP_logs/c5l'
+  checkpoints_path = '/home/yuxin/meltingpot/MARL/SP_checkpoints/c5l'
+  log_path = '/home/yuxin/meltingpot/MARL/SP_outputs/c5l.txt'
   checkpoint_freq = 125
   num_gens = 25
   seeds = [11, 22, 33, 44, 55]
 
   continuous_training = True
-  starting_gen = 11
+  starting_gen = 22
 
   gen_len = checkpoint_freq * config.train_batch_size
   num_seeds = len(seeds)
