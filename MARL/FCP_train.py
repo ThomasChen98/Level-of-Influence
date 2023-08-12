@@ -12,7 +12,7 @@ from examples.rllib import utils
 from meltingpot.python import substrate
 
 def get_config(
-    substrate_name: str = "chicken_in_the_matrix__repeated",
+    substrate_name: str = "chicken_in_the_matrix__repeated_small",
     num_rollout_workers: int = 2,
     rollout_fragment_length: int = 100,
     train_batch_size: int = 1600,
@@ -123,11 +123,14 @@ def main():
   tune.register_env("meltingpot", utils.env_creator)
 
   # parameters
-  save_path = './MARL/PP_logs/c3l'
-  checkpoints_path = './MARL/PP_checkpoints/c3l'
-  log_path = './MARL/PP_outputs/c3l.txt'
-  checkpoint_freq = 125
-  num_gens = 25
+  save_path = './MARL/FCP_logs/c3s'
+  checkpoints_path = './MARL/FCP_checkpoints/c3s'
+  log_path = './MARL/FCP_outputs/c3s.txt'
+
+  checkpoints_pool = './MARL/SP_checkpoints/c5s'
+
+  checkpoint_freq = 1
+  num_gens = 100
   seeds = [11,22,33]
 
   gen_len = checkpoint_freq * config.train_batch_size
@@ -172,15 +175,20 @@ def main():
         ppo.restore(checkpoints_dict[f"Seed_{seed}"][-1])  # This would write both the weights of agent_0 and agent_1 from its own seed
 
       # Set Player 1's policy
-      opp_seed = random.randint(0, num_seeds - 1)
-      if (len(checkpoints_dict[f"Seed_{opp_seed}"]) > 0):
-        with open(log_path, "a") as f:
-          f.write('Load player 1 policy from ' + checkpoints_dict[f"Seed_{opp_seed}"][-1] + '\n')
-          f.close()
-        ppo_dummy = ppo
-        ppo_dummy.restore(checkpoints_dict[f"Seed_{opp_seed}"][-1])
-        opp_weights = ppo_dummy.get_policy("agent_0").get_weights()
-        ppo.set_weights({"agent_1": opp_weights})  # This would overwrite the weights of agent_1 with agent_0's weight from the other seed
+      if (len(checkpoints_dict[f"Seed_{seed}"]) > 0): # random choose from pool after 1st step
+        opp_seed = random.choice(os.listdir(checkpoints_pool))
+        opp_gen = random.choice(os.listdir(os.path.join(checkpoints_pool, opp_seed)))
+        opp_checkpoint = random.choice(os.listdir(os.path.join(checkpoints_pool, opp_seed, opp_gen)))
+        opp_checkpoint_dir = os.path.join(checkpoints_pool, opp_seed, opp_gen, opp_checkpoint)
+
+        if (os.path.exists(opp_checkpoint_dir)):
+          with open(log_path, "a") as f:
+            f.write('Load player 1 policy from ' + opp_checkpoint_dir + '\n')
+            f.close()
+          ppo_dummy = ppo
+          ppo_dummy.restore(opp_checkpoint_dir)
+          opp_weights = ppo_dummy.get_policy("agent_0").get_weights()
+          ppo.set_weights({"agent_1": opp_weights})  # This would overwrite the weights of agent_1 with agent_0's weight from the other seed
 
       # Train the agent for checkpoint_freq times before saving the checkpoint
       with open(log_path, "a") as f:
