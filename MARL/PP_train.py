@@ -130,32 +130,55 @@ def main():
   num_gens = 25
   seeds = [11,22,33]
 
+  continuous_training = False
+  starting_gen = 0
+
   gen_len = checkpoint_freq * config.train_batch_size
   num_seeds = len(seeds)
 
   # clear output
-  f = open(log_path, "w")
-  f.close()
+  if not continuous_training:
+    f = open(log_path, "w")
+    f.close()
 
   # Initialize ray, train and save
   ray.init()
 
   # logging
-  timesteps = [[] for j in range(num_seeds)]
-  policy_reward_min = [[[] for i in range(2)] for j in range(num_seeds)]
-  policy_reward_mean = [[[] for i in range(2)] for j in range(num_seeds)]
-  policy_reward_max = [[[] for i in range(2)] for j in range(num_seeds)]
+  if not continuous_training:
+    timesteps = [[] for j in range(num_seeds)]
+    policy_reward_min = [[[] for i in range(2)] for j in range(num_seeds)]
+    policy_reward_mean = [[[] for i in range(2)] for j in range(num_seeds)]
+    policy_reward_max = [[[] for i in range(2)] for j in range(num_seeds)]
+  else:
+    raw_data = np.load(save_path+'.npz')
+    timesteps = raw_data['timesteps'].tolist()
+    policy_reward_min = raw_data['policy_reward_min'].tolist()
+    policy_reward_mean = raw_data['policy_reward_mean'].tolist()
+    policy_reward_max = raw_data['policy_reward_max'].tolist()
 
   # A dictionary of lists of checkpoints for each seed/population
 
-  for f in os.scandir(checkpoints_path):
-    if f.is_dir():
-      shutil.rmtree(f)
-  checkpoints_dict = {}
-  for seed in range(num_seeds):
-    checkpoints_dict[f'Seed_{seed}'] = []
+  if not continuous_training:
+    for f in os.scandir(checkpoints_path):
+      if f.is_dir():
+        shutil.rmtree(f)
+    checkpoints_dict = {}
+    for seed in range(num_seeds):
+      checkpoints_dict[f'Seed_{seed}'] = []
+  else:
+    checkpoints_dict = {}
+    for seed in range(num_seeds):
+      current_seed_path = os.path.join(checkpoints_path, f'seed_{seed}')
+      dir_list = sorted(os.listdir(current_seed_path))
+      latest_gen_path = os.path.join(current_seed_path, dir_list[-1])
+      latest_checkpoint_path = os.path.join(latest_gen_path, os.listdir(latest_gen_path)[-1])
+      checkpoints_dict[f'Seed_{seed}'] = [latest_checkpoint_path]
 
   for gen in range(num_gens):
+    if continuous_training:
+      if gen <= starting_gen:
+        continue
     for seed in range(num_seeds):
       # config.env_config["seed"] = seeds[seed]
       ppo = PPO(config=config.to_dict())
