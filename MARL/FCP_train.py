@@ -12,7 +12,7 @@ from examples.rllib import utils
 from meltingpot.python import substrate
 
 def get_config(
-    substrate_name: str = "stag_hunt_in_the_matrix__repeated_medium",
+    substrate_name: str = "prisoners_dilemma_in_the_matrix__repeated_obstacle",
     num_rollout_workers: int = 2,
     rollout_fragment_length: int = 100,
     train_batch_size: int = 1600,
@@ -102,7 +102,7 @@ def get_config(
   # The final layer must be chosen specifically so that its output is
   # [B, 1, 1, X]. See the explanation in
   # https://docs.ray.io/en/latest/rllib-models.html#built-in-models. It is
-  # because rllib is unable to flatten to a vector otherwise.
+  # because rllib is unable to flatteno to a vector otherwise.
   # The acb models used as baselines in the meltingpot paper were not run using
   # rllib, so they used a different configuration for the second convolutional
   # layer. It was 32 channels, [4, 4] kernel shape, and stride = 1.
@@ -123,15 +123,15 @@ def main():
   tune.register_env("meltingpot", utils.env_creator)
 
   # parameters
-  save_path = './MARL/FCP_logs/sh3m'
-  checkpoints_path = './MARL/FCP_checkpoints/sh3m'
-  log_path = './MARL/FCP_outputs/sh3m.txt'
+  save_path = './MARL/FCP_logs/pd5o'
+  checkpoints_path = './MARL/FCP_checkpoints/pd5o'
+  log_path = './MARL/FCP_outputs/pd5o.txt'
 
-  checkpoints_pool = './MARL/SP_checkpoints/sh5m'
+  checkpoints_pool = './MARL/SP_checkpoints/pd5o'
 
   checkpoint_freq = 125
   num_gens = 25
-  seeds = [11,22,33]
+  seeds = [11,22,33,44,55]
 
   continuous_training = False
   starting_gen = 0
@@ -156,7 +156,7 @@ def main():
   else:
     raw_data = np.load(save_path+'.npz')
     timesteps = raw_data['timesteps'].tolist()
-    policy_reward_min = raw_data['policy_reward_min'].tolist()
+    policy_reward_min = raw_data['policy_reward_min'].topd5llist()
     policy_reward_mean = raw_data['policy_reward_mean'].tolist()
     policy_reward_max = raw_data['policy_reward_max'].tolist()
 
