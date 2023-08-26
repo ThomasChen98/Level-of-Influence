@@ -16,27 +16,26 @@ import os
 
 from examples.rllib import utils
 
-
 def main():
   agent_algorithm = "PPO"
   episode_num = 20
   episode_len = 2000
-  checkpoint_dir = './MARL/FCP_checkpoints/'
-  # save_name_list = ['./MARL/tournament_data/chicken_O_FCP3']
-  # save_name_list = ['./MARL/tournament_data/pure_coordination_O_FCP3']
-  # save_name_list = ['./MARL/tournament_data/prisoners_dilemma_O_FCP3']
-  save_name_list = ['./MARL/tournament_data/stag_hunt_O_FCP3']
-  # experiment_state_list = ['~/ray_results/PPO/experiment_state-chicken_O_5M.json']
+  checkpoint_dir = './MARL/SP_checkpoints/'
+  save_name_list = ['./MARL/tournament_data/chicken_O_SP5']
+  # save_name_list = ['./MARL/tournament_data/pure_coordination_O_SP5']
+  # save_name_list = ['./MARL/tournament_data/prisoners_dilemma_O_SP5']
+  # save_name_list = ['./MARL/tournament_data/stag_hunt_O_SP5']
+  experiment_state_list = ['~/ray_results/PPO/experiment_state-chicken_O_5M.json']
   # experiment_state_list = ['~/ray_results/PPO/experiment_state-pure_coordination_O_5M.json']
   # experiment_state_list = ['~/ray_results/PPO/experiment_state-prisoners_dilemma_O_5M.json']
-  experiment_state_list = ['~/ray_results/PPO/experiment_state-stag_hunt_O_5M.json']
-  ego_name_list = ['sh3o']
-  opponent_name_list = ['sh_o']
+  # experiment_state_list = ['~/ray_results/PPO/experiment_state-stag_hunt_O_5M.json']
+  ego_name_list = ['c5o']
+  opponent_name_list = ['c_o']
   for _ in range(len(save_name_list)):
     save_name = save_name_list[_]
     experiment_state = experiment_state_list[_]
     ego_name = ego_name_list[_]
-    ego_seed = 3  # CHANGE THIS
+    ego_seed = 5  # CHANGE THIS
     opponent_name = opponent_name_list[_]
     opponent_seed = 1  # CHANGE THIS
 
