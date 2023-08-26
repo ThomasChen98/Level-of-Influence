@@ -21,10 +21,10 @@ def main():
   episode_num = 20
   episode_len = 2000
   checkpoint_dir = './MARL/SP_checkpoints/'
-  save_name_list = ['./MARL/tournament_data/chicken_O_SP5']
-  # save_name_list = ['./MARL/tournament_data/pure_coordination_O_SP5']
-  # save_name_list = ['./MARL/tournament_data/prisoners_dilemma_O_SP5']
-  # save_name_list = ['./MARL/tournament_data/stag_hunt_O_SP5']
+  save_name_list = ['./MARL/data_tournament/chicken_O_SP5']
+  # save_name_list = ['./MARL/data_tournament/pure_coordination_O_SP5']
+  # save_name_list = ['./MARL/data_tournament/prisoners_dilemma_O_SP5']
+  # save_name_list = ['./MARL/data_tournament/stag_hunt_O_SP5']
   experiment_state_list = ['~/ray_results/PPO/experiment_state-chicken_O_5M.json']
   # experiment_state_list = ['~/ray_results/PPO/experiment_state-pure_coordination_O_5M.json']
   # experiment_state_list = ['~/ray_results/PPO/experiment_state-prisoners_dilemma_O_5M.json']

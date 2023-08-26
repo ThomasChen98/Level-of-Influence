@@ -21,7 +21,7 @@ def main():
   episode_num = 50
   episode_len = 2000
   env_name = 'stag_hunt_L'
-  save_name = './MARL/index_data/'+env_name+'_5M'
+  save_name = './MARL/data_index/'+env_name+'_5M'
   experiment_state = '~/ray_results/PPO/experiment_state-'+env_name+'_5M.json'
 
   # opponent_checkpoint_list = [20, 140, 280, 560, 600, 660, 1040, 1160, 1200, 1820, 2120]  # Chicken Large
