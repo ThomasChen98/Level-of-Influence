@@ -18,7 +18,7 @@ from examples.rllib import utils
 
 def main():
   agent_algorithm = "PPO"
-  episode_num = 50
+  episode_num = 20
   episode_len = 2000
   env_name = 'stag_hunt_L'
   save_name = './MARL/data_index/'+env_name+'_5M'
@@ -36,7 +36,7 @@ def main():
   # opponent_checkpoint_list = [20, 320, 840, 1740, 2300, 2580, 2640, 2700, 2740, 2800, 2840] # Prisoners Dilemma Obstacle
   # opponent_checkpoint_list = [80, 180, 280, 340, 1380, 1820, 1860, 2520, 2780, 3000, 3125] # Prisoners Dilemma Medium
   # opponent_checkpoint_list = [20, 100, 300, 480, 520, 1260, 1700, 2380, 2780, 2820, 2880]  # Prisoners Dilemma Small
-  opponent_checkpoint_list = [20, 60, 220, 360, 460, 660, 700, 1900, 1960, 2560, 2640]  # Stag Hunt Large
+  # opponent_checkpoint_list = [20, 60, 220, 360, 460, 660, 700, 1900, 1960, 2560, 2640]  # Stag Hunt Large
   # opponent_checkpoint_list = [20, 80, 420, 500, 600, 800, 900, 1440, 1880, 2340, 2460]  # Stag Hunt Obstacle
   # opponent_checkpoint_list = [140, 180, 240, 280, 400, 660, 920, 1280, 1500, 2740, 3040]  # Stag Hunt Medium
   # opponent_checkpoint_list = [20, 140, 240, 300, 380, 500, 1540, 1780, 2260, 2580, 2600]  # Stag Hunt Small
@@ -60,15 +60,15 @@ def main():
   # rewards
   rewards = np.empty((len(opponent_checkpoint), episode_num, 2)) # checkpoint x episode x player
 
+  # Create a new environment to visualise
+  env = utils.env_creator(config["env_config"]).get_dmlab2d_env()
+
   for checkpoint in range(len(opponent_checkpoint)):
     ego_trainer = get_trainer_class(agent_algorithm)(config=config)
     ego_trainer.restore(ego_checkpoint)
     opponent_trainer = get_trainer_class(agent_algorithm)(config=config)
     opponent_trainer.restore(opponent_checkpoint[checkpoint])
     trainer = [ego_trainer, opponent_trainer]
-
-    # Create a new environment to visualise
-    env = utils.env_creator(config["env_config"]).get_dmlab2d_env()
 
     bots = [
       utils.RayModelPolicy(trainer[i], f"agent_{i}")

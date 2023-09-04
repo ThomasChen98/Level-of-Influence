@@ -989,3 +989,1003 @@ TIMESTEP 5000.0K
 EPISODE REWARD MEAN 179.5415708994709
 CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_024/checkpoint_005500
 ####################################################################################################
+SEED 0/5 GENERATION 25/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_024/checkpoint_005250
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_024/checkpoint_005250
+[**************************************************] 125/125
+TIMESTEP 5200.0K
+EPISODE REWARD MEAN 171.18221887926887
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_025/checkpoint_005375
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 25/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_024/checkpoint_005375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_024/checkpoint_005375
+[**************************************************] 125/125
+TIMESTEP 5200.0K
+EPISODE REWARD MEAN 180.57333783068782
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_025/checkpoint_005500
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 25/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_024/checkpoint_005375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_025/checkpoint_005375
+[**************************************************] 125/125
+TIMESTEP 5200.0K
+EPISODE REWARD MEAN 180.73750785233287
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_025/checkpoint_005500
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 25/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_024/checkpoint_005500
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_025/checkpoint_005500
+[**************************************************] 125/125
+TIMESTEP 5200.0K
+EPISODE REWARD MEAN 168.29319365079363
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_025/checkpoint_005625
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 25/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_024/checkpoint_005500
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_025/checkpoint_005500
+[**************************************************] 125/125
+TIMESTEP 5200.0K
+EPISODE REWARD MEAN 176.12435185185186
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_025/checkpoint_005625
+####################################################################################################
+SEED 0/5 GENERATION 26/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_025/checkpoint_005375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_025/checkpoint_005625
+[**************************************************] 125/125
+TIMESTEP 5400.0K
+EPISODE REWARD MEAN 185.68586954198068
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_026/checkpoint_005750
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 26/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_025/checkpoint_005500
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_025/checkpoint_005625
+[**************************************************] 125/125
+TIMESTEP 5400.0K
+EPISODE REWARD MEAN 183.37527736867943
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_026/checkpoint_005750
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 26/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_025/checkpoint_005500
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_025/checkpoint_005625
+[**************************************************] 125/125
+TIMESTEP 5400.0K
+EPISODE REWARD MEAN 176.76509617604617
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_026/checkpoint_005750
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 26/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_025/checkpoint_005625
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_025/checkpoint_005625
+[**************************************************] 125/125
+TIMESTEP 5400.0K
+EPISODE REWARD MEAN 173.2916145502646
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_026/checkpoint_005750
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 26/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_025/checkpoint_005625
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_026/checkpoint_005750
+[**************************************************] 125/125
+TIMESTEP 5400.0K
+EPISODE REWARD MEAN 172.3637174603175
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_026/checkpoint_005875
+####################################################################################################
+SEED 0/5 GENERATION 27/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_026/checkpoint_005750
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_026/checkpoint_005875
+[**************************************************] 125/125
+TIMESTEP 5600.0K
+EPISODE REWARD MEAN 175.50583650793646
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_027/checkpoint_006000
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 27/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_026/checkpoint_005750
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_027/checkpoint_006000
+[**************************************************] 125/125
+TIMESTEP 5600.0K
+EPISODE REWARD MEAN 195.67927947208852
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_027/checkpoint_006125
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 27/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_026/checkpoint_005750
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_026/checkpoint_005750
+[**************************************************] 125/125
+TIMESTEP 5600.0K
+EPISODE REWARD MEAN 180.65870238095238
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_027/checkpoint_005875
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 27/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_026/checkpoint_005750
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_026/checkpoint_005750
+[**************************************************] 125/125
+TIMESTEP 5600.0K
+EPISODE REWARD MEAN 182.82148823021274
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_027/checkpoint_005875
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 27/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_026/checkpoint_005875
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_026/checkpoint_005875
+[**************************************************] 125/125
+TIMESTEP 5600.0K
+EPISODE REWARD MEAN 183.8868214285714
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_027/checkpoint_006000
+####################################################################################################
+SEED 0/5 GENERATION 28/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_027/checkpoint_006000
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_027/checkpoint_005875
+[**************************************************] 125/125
+TIMESTEP 5800.0K
+EPISODE REWARD MEAN 169.0696150793651
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_028/checkpoint_006000
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 28/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_027/checkpoint_006125
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_028/checkpoint_006000
+[**************************************************] 125/125
+TIMESTEP 5800.0K
+EPISODE REWARD MEAN 178.62036349206355
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_028/checkpoint_006125
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 28/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_027/checkpoint_005875
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_027/checkpoint_006000
+[**************************************************] 125/125
+TIMESTEP 5800.0K
+EPISODE REWARD MEAN 181.5161325396826
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_028/checkpoint_006125
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 28/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_027/checkpoint_005875
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_028/checkpoint_006000
+[**************************************************] 125/125
+TIMESTEP 5800.0K
+EPISODE REWARD MEAN 191.08789919242554
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_028/checkpoint_006125
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 28/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_027/checkpoint_006000
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_028/checkpoint_006125
+[**************************************************] 125/125
+TIMESTEP 5800.0K
+EPISODE REWARD MEAN 187.4316088975273
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_028/checkpoint_006250
+####################################################################################################
+SEED 0/5 GENERATION 29/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_028/checkpoint_006000
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_028/checkpoint_006250
+[**************************************************] 125/125
+TIMESTEP 6000.0K
+EPISODE REWARD MEAN 197.72627865961203
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_029/checkpoint_006375
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 29/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_028/checkpoint_006125
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_028/checkpoint_006125
+[**************************************************] 125/125
+TIMESTEP 6000.0K
+EPISODE REWARD MEAN 185.1844407407408
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_029/checkpoint_006250
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 29/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_028/checkpoint_006125
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_029/checkpoint_006375
+[**************************************************] 125/125
+TIMESTEP 6000.0K
+EPISODE REWARD MEAN 208.6284470899471
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_029/checkpoint_006500
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 29/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_028/checkpoint_006125
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_028/checkpoint_006125
+[**************************************************] 125/125
+TIMESTEP 6000.0K
+EPISODE REWARD MEAN 188.95543839758128
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_029/checkpoint_006250
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 29/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_028/checkpoint_006250
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_028/checkpoint_006250
+[**************************************************] 125/125
+TIMESTEP 6000.0K
+EPISODE REWARD MEAN 185.21353268131045
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_029/checkpoint_006375
+####################################################################################################
+SEED 0/5 GENERATION 30/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_029/checkpoint_006375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_029/checkpoint_006250
+[**************************************************] 125/125
+TIMESTEP 6200.0K
+EPISODE REWARD MEAN 177.6750015873016
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_030/checkpoint_006375
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 30/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_029/checkpoint_006250
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_029/checkpoint_006375
+[**************************************************] 125/125
+TIMESTEP 6200.0K
+EPISODE REWARD MEAN 175.68747962962968
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_030/checkpoint_006500
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 30/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_029/checkpoint_006500
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_029/checkpoint_006375
+[**************************************************] 125/125
+TIMESTEP 6200.0K
+EPISODE REWARD MEAN 182.0559606060606
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_030/checkpoint_006500
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 30/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_029/checkpoint_006250
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_030/checkpoint_006500
+[**************************************************] 125/125
+TIMESTEP 6200.0K
+EPISODE REWARD MEAN 202.50198554929742
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_030/checkpoint_006625
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 30/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_029/checkpoint_006375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_030/checkpoint_006500
+[**************************************************] 125/125
+TIMESTEP 6200.0K
+EPISODE REWARD MEAN 181.61892777777783
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_030/checkpoint_006625
+####################################################################################################
+SEED 0/5 GENERATION 31/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_030/checkpoint_006375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_030/checkpoint_006500
+[**************************************************] 125/125
+TIMESTEP 6400.0K
+EPISODE REWARD MEAN 191.79668483779596
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_031/checkpoint_006625
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 31/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_030/checkpoint_006500
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_030/checkpoint_006500
+[**************************************************] 125/125
+TIMESTEP 6400.0K
+EPISODE REWARD MEAN 196.63003597883602
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_031/checkpoint_006625
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 31/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_030/checkpoint_006500
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_030/checkpoint_006625
+[**************************************************] 125/125
+TIMESTEP 6400.0K
+EPISODE REWARD MEAN 177.83502475949976
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_031/checkpoint_006750
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 31/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_030/checkpoint_006625
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_031/checkpoint_006625
+[**************************************************] 125/125
+TIMESTEP 6400.0K
+EPISODE REWARD MEAN 205.7102277562072
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_031/checkpoint_006750
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 31/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_030/checkpoint_006625
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_031/checkpoint_006750
+[**************************************************] 125/125
+TIMESTEP 6400.0K
+EPISODE REWARD MEAN 217.33741612884478
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_031/checkpoint_006875
+####################################################################################################
+SEED 0/5 GENERATION 32/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_031/checkpoint_006625
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_031/checkpoint_006875
+[**************************************************] 125/125
+TIMESTEP 6600.0K
+EPISODE REWARD MEAN 211.52725020885546
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_032/checkpoint_007000
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 32/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_031/checkpoint_006625
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_031/checkpoint_006875
+[**************************************************] 125/125
+TIMESTEP 6600.0K
+EPISODE REWARD MEAN 203.69588042328044
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_032/checkpoint_007000
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 32/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_031/checkpoint_006750
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_032/checkpoint_007000
+[**************************************************] 125/125
+TIMESTEP 6600.0K
+EPISODE REWARD MEAN 206.08505924823635
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_032/checkpoint_007125
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 32/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_031/checkpoint_006750
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_031/checkpoint_006750
+[**************************************************] 125/125
+TIMESTEP 6600.0K
+EPISODE REWARD MEAN 192.40494973544975
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_032/checkpoint_006875
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 32/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_031/checkpoint_006875
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_032/checkpoint_007125
+[**************************************************] 125/125
+TIMESTEP 6600.0K
+EPISODE REWARD MEAN 192.8121078042328
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_032/checkpoint_007250
+####################################################################################################
+SEED 0/5 GENERATION 33/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_032/checkpoint_007000
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_032/checkpoint_007000
+[**************************************************] 125/125
+TIMESTEP 6800.0K
+EPISODE REWARD MEAN 205.76702272972688
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_033/checkpoint_007125
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 33/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_032/checkpoint_007000
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_032/checkpoint_007250
+[**************************************************] 125/125
+TIMESTEP 6800.0K
+EPISODE REWARD MEAN 176.48229362674365
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_033/checkpoint_007375
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 33/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_032/checkpoint_007125
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_032/checkpoint_006875
+[**************************************************] 125/125
+TIMESTEP 6800.0K
+EPISODE REWARD MEAN 179.0591215247715
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_033/checkpoint_007000
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 33/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_032/checkpoint_006875
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_033/checkpoint_007375
+[**************************************************] 125/125
+TIMESTEP 6800.0K
+EPISODE REWARD MEAN 188.9402878836465
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_033/checkpoint_007500
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 33/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_032/checkpoint_007250
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_033/checkpoint_007500
+[**************************************************] 125/125
+TIMESTEP 6800.0K
+EPISODE REWARD MEAN 180.37988783068784
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_033/checkpoint_007625
+####################################################################################################
+SEED 0/5 GENERATION 34/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_033/checkpoint_007125
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_033/checkpoint_007375
+[**************************************************] 125/125
+TIMESTEP 7000.0K
+EPISODE REWARD MEAN 171.95977368464864
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_034/checkpoint_007500
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 34/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_033/checkpoint_007375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_034/checkpoint_007500
+[**************************************************] 125/125
+TIMESTEP 7000.0K
+EPISODE REWARD MEAN 192.68999574314577
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_034/checkpoint_007625
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 34/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_033/checkpoint_007000
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_034/checkpoint_007625
+[**************************************************] 125/125
+TIMESTEP 7000.0K
+EPISODE REWARD MEAN 185.34313359788356
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_034/checkpoint_007750
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 34/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_033/checkpoint_007500
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_034/checkpoint_007625
+[**************************************************] 125/125
+TIMESTEP 7000.0K
+EPISODE REWARD MEAN 194.51231052188555
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_034/checkpoint_007750
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 34/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_033/checkpoint_007625
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_034/checkpoint_007625
+[**************************************************] 125/125
+TIMESTEP 7000.0K
+EPISODE REWARD MEAN 217.04587976539594
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_034/checkpoint_007750
+####################################################################################################
+SEED 0/5 GENERATION 35/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_034/checkpoint_007500
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_034/checkpoint_007625
+[**************************************************] 125/125
+TIMESTEP 7200.0K
+EPISODE REWARD MEAN 207.68564042486724
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_035/checkpoint_007750
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 35/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_034/checkpoint_007625
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_035/checkpoint_007750
+[**************************************************] 125/125
+TIMESTEP 7200.0K
+EPISODE REWARD MEAN 183.58821481481482
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_035/checkpoint_007875
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 35/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_034/checkpoint_007750
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_035/checkpoint_007750
+[**************************************************] 125/125
+TIMESTEP 7200.0K
+EPISODE REWARD MEAN 199.7562984781542
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_035/checkpoint_007875
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 35/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_034/checkpoint_007750
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_035/checkpoint_007750
+[**************************************************] 125/125
+TIMESTEP 7200.0K
+EPISODE REWARD MEAN 187.64892010582017
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_035/checkpoint_007875
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 35/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_034/checkpoint_007750
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_035/checkpoint_007875
+[**************************************************] 125/125
+TIMESTEP 7200.0K
+EPISODE REWARD MEAN 202.31021293891297
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_035/checkpoint_008000
+####################################################################################################
+SEED 0/5 GENERATION 36/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_035/checkpoint_007750
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_035/checkpoint_007875
+[**************************************************] 125/125
+TIMESTEP 7400.0K
+EPISODE REWARD MEAN 212.97032825828745
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_036/checkpoint_008000
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 36/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_035/checkpoint_007875
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_035/checkpoint_007875
+[**************************************************] 125/125
+TIMESTEP 7400.0K
+EPISODE REWARD MEAN 173.7490439153439
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_036/checkpoint_008000
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 36/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_035/checkpoint_007875
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_035/checkpoint_008000
+[**************************************************] 125/125
+TIMESTEP 7400.0K
+EPISODE REWARD MEAN 208.83292098585468
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_036/checkpoint_008125
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 36/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_035/checkpoint_007875
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_035/checkpoint_008000
+[**************************************************] 125/125
+TIMESTEP 7400.0K
+EPISODE REWARD MEAN 194.48446481481486
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_036/checkpoint_008125
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 36/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_035/checkpoint_008000
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_035/checkpoint_008000
+[**************************************************] 125/125
+TIMESTEP 7400.0K
+EPISODE REWARD MEAN 217.92126668632054
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_036/checkpoint_008125
+####################################################################################################
+SEED 0/5 GENERATION 37/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_036/checkpoint_008000
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_036/checkpoint_008000
+[**************************************************] 125/125
+TIMESTEP 7600.0K
+EPISODE REWARD MEAN 208.29648580066947
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_037/checkpoint_008125
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 37/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_036/checkpoint_008000
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_036/checkpoint_008125
+[**************************************************] 125/125
+TIMESTEP 7600.0K
+EPISODE REWARD MEAN 203.09222341269842
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_037/checkpoint_008250
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 37/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_036/checkpoint_008125
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_036/checkpoint_008125
+[**************************************************] 125/125
+TIMESTEP 7600.0K
+EPISODE REWARD MEAN 205.34997621719845
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_037/checkpoint_008250
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 37/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_036/checkpoint_008125
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_037/checkpoint_008250
+[**************************************************] 125/125
+TIMESTEP 7600.0K
+EPISODE REWARD MEAN 203.1686851611352
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_037/checkpoint_008375
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 37/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_036/checkpoint_008125
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_037/checkpoint_008125
+[**************************************************] 125/125
+TIMESTEP 7600.0K
+EPISODE REWARD MEAN 213.58790370370374
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_037/checkpoint_008250
+####################################################################################################
+SEED 0/5 GENERATION 38/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_037/checkpoint_008125
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_037/checkpoint_008125
+[**************************************************] 125/125
+TIMESTEP 7800.0K
+EPISODE REWARD MEAN 204.8965423280424
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_038/checkpoint_008250
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 38/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_037/checkpoint_008250
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_037/checkpoint_008250
+[**************************************************] 125/125
+TIMESTEP 7800.0K
+EPISODE REWARD MEAN 228.0686669906058
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_038/checkpoint_008375
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 38/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_037/checkpoint_008250
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_037/checkpoint_008375
+[**************************************************] 125/125
+TIMESTEP 7800.0K
+EPISODE REWARD MEAN 202.49366094810537
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_038/checkpoint_008500
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 38/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_037/checkpoint_008375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_037/checkpoint_008250
+[**************************************************] 125/125
+TIMESTEP 7800.0K
+EPISODE REWARD MEAN 219.84280773098962
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_038/checkpoint_008375
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 38/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_037/checkpoint_008250
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_038/checkpoint_008250
+[**************************************************] 125/125
+TIMESTEP 7800.0K
+EPISODE REWARD MEAN 219.08204344193817
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_038/checkpoint_008375
+####################################################################################################
+SEED 0/5 GENERATION 39/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_038/checkpoint_008250
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_038/checkpoint_008250
+[**************************************************] 125/125
+TIMESTEP 8000.0K
+EPISODE REWARD MEAN 219.49087246472664
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_039/checkpoint_008375
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 39/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_038/checkpoint_008375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_038/checkpoint_008500
+[**************************************************] 125/125
+TIMESTEP 8000.0K
+EPISODE REWARD MEAN 209.72450714285714
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_039/checkpoint_008625
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 39/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_038/checkpoint_008500
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_038/checkpoint_008375
+[**************************************************] 125/125
+TIMESTEP 8000.0K
+EPISODE REWARD MEAN 202.2790486772487
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_039/checkpoint_008500
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 39/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_038/checkpoint_008375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_038/checkpoint_008375
+[**************************************************] 125/125
+TIMESTEP 8000.0K
+EPISODE REWARD MEAN 216.0102256613757
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_039/checkpoint_008500
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 39/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_038/checkpoint_008375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_038/checkpoint_008375
+[**************************************************] 125/125
+TIMESTEP 8000.0K
+EPISODE REWARD MEAN 213.6533626984127
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_039/checkpoint_008500
+####################################################################################################
+SEED 0/5 GENERATION 40/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_039/checkpoint_008375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_039/checkpoint_008625
+[**************************************************] 125/125
+TIMESTEP 8200.0K
+EPISODE REWARD MEAN 216.98301653439157
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_040/checkpoint_008750
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 40/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_039/checkpoint_008625
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_039/checkpoint_008500
+[**************************************************] 125/125
+TIMESTEP 8200.0K
+EPISODE REWARD MEAN 211.9316837301588
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_040/checkpoint_008625
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 40/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_039/checkpoint_008500
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_039/checkpoint_008500
+[**************************************************] 125/125
+TIMESTEP 8200.0K
+EPISODE REWARD MEAN 228.01582579507314
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_040/checkpoint_008625
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 40/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_039/checkpoint_008500
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_040/checkpoint_008750
+[**************************************************] 125/125
+TIMESTEP 8200.0K
+EPISODE REWARD MEAN 193.117441005291
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_040/checkpoint_008875
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 40/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_039/checkpoint_008500
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_040/checkpoint_008625
+[**************************************************] 125/125
+TIMESTEP 8200.0K
+EPISODE REWARD MEAN 210.57634656084662
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_040/checkpoint_008750
+####################################################################################################
+SEED 0/5 GENERATION 41/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_040/checkpoint_008750
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_040/checkpoint_008750
+[**************************************************] 125/125
+TIMESTEP 8400.0K
+EPISODE REWARD MEAN 194.84723677248678
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_041/checkpoint_008875
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 41/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_040/checkpoint_008625
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_040/checkpoint_008875
+[**************************************************] 125/125
+TIMESTEP 8400.0K
+EPISODE REWARD MEAN 223.10801910640808
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_041/checkpoint_009000
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 41/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_040/checkpoint_008625
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_041/checkpoint_009000
+[**************************************************] 125/125
+TIMESTEP 8400.0K
+EPISODE REWARD MEAN 214.18098423496386
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_041/checkpoint_009125
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 41/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_040/checkpoint_008875
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_041/checkpoint_009125
+[**************************************************] 125/125
+TIMESTEP 8400.0K
+EPISODE REWARD MEAN 227.3210114069523
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_041/checkpoint_009250
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 41/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_040/checkpoint_008750
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_041/checkpoint_008875
+[**************************************************] 125/125
+TIMESTEP 8400.0K
+EPISODE REWARD MEAN 197.23467471115433
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_041/checkpoint_009000
+####################################################################################################
+SEED 0/5 GENERATION 42/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_041/checkpoint_008875
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_041/checkpoint_009125
+[**************************************************] 125/125
+TIMESTEP 8600.0K
+EPISODE REWARD MEAN 198.15369865319866
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_042/checkpoint_009250
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 42/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_041/checkpoint_009000
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_041/checkpoint_009000
+[**************************************************] 125/125
+TIMESTEP 8600.0K
+EPISODE REWARD MEAN 201.49163888888887
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_042/checkpoint_009125
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 42/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_041/checkpoint_009125
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_041/checkpoint_009000
+[**************************************************] 125/125
+TIMESTEP 8600.0K
+EPISODE REWARD MEAN 211.86084208754215
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_042/checkpoint_009125
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 42/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_041/checkpoint_009250
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_041/checkpoint_009250
+[**************************************************] 125/125
+TIMESTEP 8600.0K
+EPISODE REWARD MEAN 218.60322664989334
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_042/checkpoint_009375
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 42/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_041/checkpoint_009000
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_041/checkpoint_009000
+[**************************************************] 125/125
+TIMESTEP 8600.0K
+EPISODE REWARD MEAN 210.4502105820106
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_042/checkpoint_009125
+####################################################################################################
+SEED 0/5 GENERATION 43/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_042/checkpoint_009250
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_042/checkpoint_009375
+[**************************************************] 125/125
+TIMESTEP 8800.0K
+EPISODE REWARD MEAN 204.5897636243386
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_043/checkpoint_009500
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 43/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_042/checkpoint_009125
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_042/checkpoint_009125
+[**************************************************] 125/125
+TIMESTEP 8800.0K
+EPISODE REWARD MEAN 211.20254444444444
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_043/checkpoint_009250
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 43/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_042/checkpoint_009125
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_042/checkpoint_009125
+[**************************************************] 125/125
+TIMESTEP 8800.0K
+EPISODE REWARD MEAN 205.98643439153437
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_043/checkpoint_009250
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 43/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_042/checkpoint_009375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_043/checkpoint_009250
+[**************************************************] 125/125
+TIMESTEP 8800.0K
+EPISODE REWARD MEAN 229.05246906587115
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_043/checkpoint_009375
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 43/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_042/checkpoint_009125
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_042/checkpoint_009125
+[**************************************************] 125/125
+TIMESTEP 8800.0K
+EPISODE REWARD MEAN 202.6857010582011
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_043/checkpoint_009250
+####################################################################################################
+SEED 0/5 GENERATION 44/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_043/checkpoint_009500
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_043/checkpoint_009500
+[**************************************************] 125/125
+TIMESTEP 9000.0K
+EPISODE REWARD MEAN 230.72523941798943
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_044/checkpoint_009625
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 44/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_043/checkpoint_009250
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_044/checkpoint_009625
+[**************************************************] 125/125
+TIMESTEP 9000.0K
+EPISODE REWARD MEAN 232.85099232804234
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_044/checkpoint_009750
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 44/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_043/checkpoint_009250
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_043/checkpoint_009250
+[**************************************************] 125/125
+TIMESTEP 9000.0K
+EPISODE REWARD MEAN 213.3283322751323
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_044/checkpoint_009375
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 44/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_043/checkpoint_009375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_043/checkpoint_009250
+[**************************************************] 125/125
+TIMESTEP 9000.0K
+EPISODE REWARD MEAN 244.01069852527303
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_044/checkpoint_009375
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 44/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_043/checkpoint_009250
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_044/checkpoint_009625
+[**************************************************] 125/125
+TIMESTEP 9000.0K
+EPISODE REWARD MEAN 240.43052666691847
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_044/checkpoint_009750
+####################################################################################################
+SEED 0/5 GENERATION 45/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_044/checkpoint_009625
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_044/checkpoint_009375
+[**************************************************] 125/125
+TIMESTEP 9200.0K
+EPISODE REWARD MEAN 237.09217625995404
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_045/checkpoint_009500
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 45/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_044/checkpoint_009750
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_044/checkpoint_009750
+[**************************************************] 125/125
+TIMESTEP 9200.0K
+EPISODE REWARD MEAN 222.63161392496394
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_045/checkpoint_009875
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 45/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_044/checkpoint_009375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_044/checkpoint_009375
+[**************************************************] 125/125
+TIMESTEP 9200.0K
+EPISODE REWARD MEAN 214.84349603174604
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_045/checkpoint_009500
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 45/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_044/checkpoint_009375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_045/checkpoint_009500
+[**************************************************] 125/125
+TIMESTEP 9200.0K
+EPISODE REWARD MEAN 215.91764417989424
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_045/checkpoint_009625
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 45/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_044/checkpoint_009750
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_045/checkpoint_009875
+[**************************************************] 125/125
+TIMESTEP 9200.0K
+EPISODE REWARD MEAN 241.16352698412697
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_045/checkpoint_010000
+####################################################################################################
+SEED 0/5 GENERATION 46/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_045/checkpoint_009500
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_045/checkpoint_009500
+[**************************************************] 125/125
+TIMESTEP 9400.0K
+EPISODE REWARD MEAN 217.55626574074077
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_046/checkpoint_009625
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 46/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_045/checkpoint_009875
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_045/checkpoint_010000
+[**************************************************] 125/125
+TIMESTEP 9400.0K
+EPISODE REWARD MEAN 248.53916796937634
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_046/checkpoint_010125
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 46/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_045/checkpoint_009500
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_045/checkpoint_009625
+[**************************************************] 125/125
+TIMESTEP 9400.0K
+EPISODE REWARD MEAN 226.86317142857143
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_046/checkpoint_009750
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 46/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_045/checkpoint_009625
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_046/checkpoint_009750
+[**************************************************] 125/125
+TIMESTEP 9400.0K
+EPISODE REWARD MEAN 216.36915185185185
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_046/checkpoint_009875
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 46/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_045/checkpoint_010000
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_046/checkpoint_010125
+[**************************************************] 125/125
+TIMESTEP 9400.0K
+EPISODE REWARD MEAN 226.05741851851855
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_046/checkpoint_010250
+####################################################################################################
+SEED 0/5 GENERATION 47/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_046/checkpoint_009625
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_046/checkpoint_010250
+[**************************************************] 125/125
+TIMESTEP 9600.0K
+EPISODE REWARD MEAN 237.81691974119815
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_047/checkpoint_010375
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 47/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_046/checkpoint_010125
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_046/checkpoint_010250
+[**************************************************] 125/125
+TIMESTEP 9600.0K
+EPISODE REWARD MEAN 226.19582645502652
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_047/checkpoint_010375
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 47/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_046/checkpoint_009750
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_046/checkpoint_009750
+[**************************************************] 125/125
+TIMESTEP 9600.0K
+EPISODE REWARD MEAN 227.1355973544974
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_047/checkpoint_009875
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 47/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_046/checkpoint_009875
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_046/checkpoint_010250
+[**************************************************] 125/125
+TIMESTEP 9600.0K
+EPISODE REWARD MEAN 229.12312397787403
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_047/checkpoint_010375
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 47/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_046/checkpoint_010250
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_047/checkpoint_010375
+[**************************************************] 125/125
+TIMESTEP 9600.0K
+EPISODE REWARD MEAN 237.81146296296302
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_047/checkpoint_010500
+####################################################################################################
+SEED 0/5 GENERATION 48/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_047/checkpoint_010375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_047/checkpoint_010375
+[**************************************************] 125/125
+TIMESTEP 9800.0K
+EPISODE REWARD MEAN 234.42846851851854
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_048/checkpoint_010500
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 48/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_047/checkpoint_010375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_047/checkpoint_009875
+[**************************************************] 125/125
+TIMESTEP 9800.0K
+EPISODE REWARD MEAN 222.52844365079363
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_048/checkpoint_010000
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 48/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_047/checkpoint_009875
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_048/checkpoint_010500
+[**************************************************] 125/125
+TIMESTEP 9800.0K
+EPISODE REWARD MEAN 238.94336833947952
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_048/checkpoint_010625
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 48/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_047/checkpoint_010375
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_048/checkpoint_010625
+[**************************************************] 125/125
+TIMESTEP 9800.0K
+EPISODE REWARD MEAN 223.2685920634921
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_048/checkpoint_010750
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 48/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_047/checkpoint_010500
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_048/checkpoint_010625
+[**************************************************] 125/125
+TIMESTEP 9800.0K
+EPISODE REWARD MEAN 225.39070634920637
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_048/checkpoint_010750
+####################################################################################################
+SEED 0/5 GENERATION 49/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_048/checkpoint_010500
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_048/checkpoint_010000
+[**************************************************] 125/125
+TIMESTEP 10000.0K
+EPISODE REWARD MEAN 225.60098412698414
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_0/gen_049/checkpoint_010125
+----------------------------------------------------------------------------------------------------
+SEED 1/5 GENERATION 49/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_048/checkpoint_010000
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_0/gen_049/checkpoint_010125
+[**************************************************] 125/125
+TIMESTEP 10000.0K
+EPISODE REWARD MEAN 237.39951984126986
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_1/gen_049/checkpoint_010250
+----------------------------------------------------------------------------------------------------
+SEED 2/5 GENERATION 49/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_048/checkpoint_010625
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_048/checkpoint_010750
+[**************************************************] 125/125
+TIMESTEP 10000.0K
+EPISODE REWARD MEAN 226.6254881914382
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_2/gen_049/checkpoint_010875
+----------------------------------------------------------------------------------------------------
+SEED 3/5 GENERATION 49/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_3/gen_048/checkpoint_010750
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_1/gen_049/checkpoint_010250
+[**************************************************] 125/125
+TIMESTEP 10000.0K
+EPISODE REWARD MEAN 234.69370767195767
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_3/gen_049/checkpoint_010375
+----------------------------------------------------------------------------------------------------
+SEED 4/5 GENERATION 49/50
+Load player 0 policy from ./MARL/PP_checkpoints/pd5s/seed_4/gen_048/checkpoint_010750
+Load player 1 policy from ./MARL/PP_checkpoints/pd5s/seed_2/gen_049/checkpoint_010875
+[**************************************************] 125/125
+TIMESTEP 10000.0K
+EPISODE REWARD MEAN 229.2728134920635
+CHECKPOINT PATH ./MARL/PP_checkpoints/pd5s/seed_4/gen_049/checkpoint_011000
+####################################################################################################

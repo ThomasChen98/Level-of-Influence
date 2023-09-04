@@ -123,15 +123,15 @@ def main():
   tune.register_env("meltingpot", utils.env_creator)
 
   # parameters
-  save_path = './MARL/PP_logs/c5m'
-  checkpoints_path = './MARL/PP_checkpoints/c5m'
-  log_path = './MARL/PP_outputs/c5m.txt'
+  save_path = './MARL/PP_logs/c3m'
+  checkpoints_path = './MARL/PP_checkpoints/c3m'
+  log_path = './MARL/PP_outputs/c3m.txt'
   checkpoint_freq = 125
-  num_gens = 25
-  seeds = [11,22,33,44,55]
+  num_gens = 50
+  seeds = [11,22,33]
 
-  continuous_training = False
-  starting_gen = 0
+  continuous_training = True
+  starting_gen = 24
 
   gen_len = checkpoint_freq * config.train_batch_size
   num_seeds = len(seeds)

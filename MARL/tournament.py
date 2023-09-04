@@ -18,24 +18,33 @@ from examples.rllib import utils
 
 def main():
   agent_algorithm = "PPO"
-  episode_num = 20
+  episode_num = 10
   episode_len = 2000
-  checkpoint_dir = './MARL/SP_checkpoints/'
-  save_name_list = ['./MARL/data_tournament/chicken_O_SP5']
-  # save_name_list = ['./MARL/data_tournament/pure_coordination_O_SP5']
-  # save_name_list = ['./MARL/data_tournament/prisoners_dilemma_O_SP5']
-  # save_name_list = ['./MARL/data_tournament/stag_hunt_O_SP5']
-  experiment_state_list = ['~/ray_results/PPO/experiment_state-chicken_O_5M.json']
-  # experiment_state_list = ['~/ray_results/PPO/experiment_state-pure_coordination_O_5M.json']
-  # experiment_state_list = ['~/ray_results/PPO/experiment_state-prisoners_dilemma_O_5M.json']
-  # experiment_state_list = ['~/ray_results/PPO/experiment_state-stag_hunt_O_5M.json']
-  ego_name_list = ['c5o']
-  opponent_name_list = ['c_o']
+  ###
+  exp_name = 'PP5'
+  checkpoint_dir = './MARL/PP_checkpoints/'
+  num_seed = 5
+  config_size = 'm'
+  config_name = 'sh'
+  ###
+
+  config_name_dict = {
+    'c': 'chicken',
+    'pc': 'pure_coordination',
+    'pd': 'prisoners_dilemma',
+    'sh': 'stag_hunt'
+  }
+
+  save_name_list = [f'./MARL/data_tournament/{config_name_dict[config_name]}_{config_size.upper()}_{exp_name}']
+  experiment_state_list = [f'~/ray_results/PPO/experiment_state-{config_name_dict[config_name]}_{config_size.upper()}_5M.json']
+  ego_name_list = [f'{config_name}{num_seed:d}{config_size}']
+  opponent_name_list = [f'{config_name}_{config_size}']
+
   for _ in range(len(save_name_list)):
     save_name = save_name_list[_]
     experiment_state = experiment_state_list[_]
     ego_name = ego_name_list[_]
-    ego_seed = 5  # CHANGE THIS
+    ego_seed = num_seed  # CHANGE THIS
     opponent_name = opponent_name_list[_]
     opponent_seed = 1  # CHANGE THIS
 
@@ -69,6 +78,9 @@ def main():
 
     config = experiment.best_config
 
+    # Create a new environment to visualise
+    env = utils.env_creator(config["env_config"]).get_dmlab2d_env()
+
     # rewards
     rewards = np.empty((len(ego_checkpoint), len(opponent_checkpoint), episode_num)) # ego x opponent x episode
 
@@ -79,9 +91,6 @@ def main():
         opponent_trainer = get_trainer_class(agent_algorithm)(config=config)
         opponent_trainer.restore(opponent_checkpoint[opponent])
         trainer = [ego_trainer, opponent_trainer]
-
-        # Create a new environment to visualise
-        env = utils.env_creator(config["env_config"]).get_dmlab2d_env()
 
         bots = [
           utils.RayModelPolicy(trainer[i], f"agent_0")
