@@ -5,7 +5,7 @@ You must provide experiment_state, expected to be
 """
 
 import argparse
-
+import os
 import dm_env
 from dmlab2d.ui_renderer import pygame
 import numpy as np
@@ -18,11 +18,37 @@ from examples.rllib import utils
 
 def main():
   agent_algorithm = "PPO"
-  episode_num = 20
+  episode_num = 6
   episode_len = 2000
-  env_name = 'stag_hunt_L'
-  save_name = './MARL/data_index/'+env_name+'_5M'
-  experiment_state = '~/ray_results/PPO/experiment_state-'+env_name+'_5M.json'
+
+  ###
+  exp_name = 'SP5'
+  checkpoint_dir = './MARL/SP_checkpoints/'
+  ego_seed_num = 1
+  opp_seed_num = 5
+  config_size = 'o'
+  config_name = 'sh'
+  ###
+
+  config_name_dict = {
+    'c': 'chicken',
+    'pc': 'pure_coordination',
+    'pd': 'prisoners_dilemma',
+    'sh': 'stag_hunt'
+  }
+
+  save_name = f'./MARL/data_index/{config_name_dict[config_name]}_{config_size.upper()}_5M_2'
+  experiment_state = f'~/ray_results/PPO/experiment_state-{config_name_dict[config_name]}_{config_size.upper()}_5M.json'
+  ego_name = f'{config_name}_{config_size}'
+  opp_name = f'{config_name}{opp_seed_num:d}{config_size}'
+
+  ego_checkpoint = []
+  for j in range(ego_seed_num):
+      temp_dir = './MARL/SP_eval_checkpoints/' + ego_name + '/seed_' + str(j)
+      gen = ['gen_018/checkpoint_002375', 'gen_020/checkpoint_002625', 
+             'gen_022/checkpoint_002875', 'gen_024/checkpoint_003125']
+      for k in range(len(gen)):
+        ego_checkpoint.append(os.path.join(temp_dir, gen[k]))
 
   # opponent_checkpoint_list = [20, 140, 280, 560, 600, 660, 1040, 1160, 1200, 1820, 2120]  # Chicken Large
   # opponent_checkpoint_list = [80, 160, 200, 580, 760, 980, 1120, 1460, 2300, 2740, 3020] # Chicken Obstacle
@@ -41,13 +67,6 @@ def main():
   # opponent_checkpoint_list = [140, 180, 240, 280, 400, 660, 920, 1280, 1500, 2740, 3040]  # Stag Hunt Medium
   # opponent_checkpoint_list = [20, 140, 240, 300, 380, 500, 1540, 1780, 2260, 2580, 2600]  # Stag Hunt Small
 
-  ego_checkpoint = '/home/yuxin/ray_results/PPO/PPO_meltingpot_'+env_name+'_5M/checkpoint_00' + str(
-    opponent_checkpoint_list[-1]).zfill(4)
-  opponent_checkpoint = []
-  for i in range(len(opponent_checkpoint_list)):
-    opponent_checkpoint.append('/home/yuxin/ray_results/PPO/PPO_meltingpot_'+env_name+'_5M/checkpoint_00' + str(
-      opponent_checkpoint_list[i]).zfill(4))
-
   register_env("meltingpot", utils.env_creator)
 
   experiment = ExperimentAnalysis(
@@ -58,58 +77,72 @@ def main():
   config = experiment.best_config
 
   # rewards
-  rewards = np.empty((len(opponent_checkpoint), episode_num, 2)) # checkpoint x episode x player
+  gen_list = [0, 2, 4, 6, 8, 12, 16, 20, 24]
+  rewards = np.empty((ego_seed_num, 4, opp_seed_num, len(gen_list), episode_num, 2)) # ego_seed x ego_gen x opp_seed x opp_gen x episode x player
 
   # Create a new environment to visualise
   env = utils.env_creator(config["env_config"]).get_dmlab2d_env()
 
-  for checkpoint in range(len(opponent_checkpoint)):
-    ego_trainer = get_trainer_class(agent_algorithm)(config=config)
-    ego_trainer.restore(ego_checkpoint)
-    opponent_trainer = get_trainer_class(agent_algorithm)(config=config)
-    opponent_trainer.restore(opponent_checkpoint[checkpoint])
-    trainer = [ego_trainer, opponent_trainer]
+  for ego_seed in range(ego_seed_num):
+    for opp_seed in range(opp_seed_num):
+      print(ego_checkpoint)
 
-    bots = [
-      utils.RayModelPolicy(trainer[i], f"agent_{i}")
-      for i in range(len(config["env_config"]["roles"]))
-    ]
+      temp_dir = checkpoint_dir + opp_name + '/seed_' + str(opp_seed)
+      gen = os.listdir(temp_dir)
+      gen.sort()
+      checkpoint_list = [os.listdir(os.path.join(temp_dir, gen[_]))[-1] for _ in range(len(gen))]
+      opponent_checkpoint = [os.path.join(temp_dir, gen[_], checkpoint_list[_]) for _ in gen_list]
+      print(opponent_checkpoint)
 
-    timestep = env.reset()
-    states = [bot.initial_state() for bot in bots]
-    actions = [0] * len(bots)
+      for ego_gen in range(len(ego_checkpoint)):
+        for opp_gen in range(len(opponent_checkpoint)):
+          ego_trainer = get_trainer_class(agent_algorithm)(config=config)
+          ego_trainer.restore(ego_checkpoint[ego_gen])
+          opponent_trainer = get_trainer_class(agent_algorithm)(config=config)
+          opponent_trainer.restore(opponent_checkpoint[opp_gen])
+          trainer = [ego_trainer, opponent_trainer]
 
-    for ep in range(episode_num):
-      ep_rewards = np.zeros(2)
-      for _ in range(episode_len):
-        obs = timestep.observation[0]["WORLD.RGB"]
-        obs = np.transpose(obs, (1, 0, 2))
+          bots = [
+            utils.RayModelPolicy(trainer[i], f"agent_{i}")
+            for i in range(len(config["env_config"]["roles"]))
+          ]
 
-        for i, bot in enumerate(bots):
-          timestep_bot = dm_env.TimeStep(
-              step_type=timestep.step_type,
-              reward=timestep.reward[i],
-              discount=timestep.discount,
-              observation=timestep.observation[i])
+          timestep = env.reset()
+          states = [bot.initial_state() for bot in bots]
+          actions = [0] * len(bots)
 
-          actions[i], states[i] = bot.step(timestep_bot, states[i])
+          for ep in range(episode_num):
+            ep_rewards = np.zeros(2)
+            for _ in range(episode_len):
+              obs = timestep.observation[0]["WORLD.RGB"]
+              obs = np.transpose(obs, (1, 0, 2))
 
-        ep_rewards += timestep.reward
-        timestep = env.step(actions)
+              for i, bot in enumerate(bots):
+                timestep_bot = dm_env.TimeStep(
+                    step_type=timestep.step_type,
+                    reward=timestep.reward[i],
+                    discount=timestep.discount,
+                    observation=timestep.observation[i])
 
-      print('-'*50)
-      print(f'Checkpoint {checkpoint:d}\tEpisode {ep:d}\tEgo reward: {ep_rewards[0]:.3f}\tOpponent reward: {ep_rewards[1]:.3f}')
+                actions[i], states[i] = bot.step(timestep_bot, states[i])
 
-      # save rewards
-      rewards[checkpoint,ep,:] = ep_rewards
+              ep_rewards += timestep.reward
+              timestep = env.step(actions)
 
-      timestep = env.reset()
-      states = [bot.initial_state() for bot in bots]
-      actions = [0] * len(bots)
-      ep_rewards = np.zeros(2)
+            print('-'*50)
+            print(f'Ego Seed {ego_seed:d} Gen {ego_gen:d} x Opp Seed {opp_seed:d} Gen {opp_gen:d}\t \
+              Episode {ep:d}\tEgo reward: {ep_rewards[0]:.3f}\tOpponent reward: {ep_rewards[1]:.3f}')
 
-  print('Final rewards:', rewards)
-  np.savez_compressed(save_name, rewards=rewards, checkpoints=opponent_checkpoint_list)
+            # save rewards
+            rewards[ego_seed, ego_gen, opp_seed, opp_gen, ep, :] = ep_rewards
+
+            timestep = env.reset()
+            states = [bot.initial_state() for bot in bots]
+            actions = [0] * len(bots)
+            ep_rewards = np.zeros(2)
+
+          print('Final rewards:', rewards)
+          np.savez_compressed(save_name, rewards=rewards, checkpoints=gen_list)
 
 if __name__ == "__main__":
   main()

@@ -21,11 +21,11 @@ def main():
   episode_num = 10
   episode_len = 2000
   ###
-  exp_name = 'PP5'
+  exp_name = 'PP3'
   checkpoint_dir = './MARL/PP_checkpoints/'
-  num_seed = 5
-  config_size = 'm'
-  config_name = 'sh'
+  num_seed = 3
+  config_size = 'o'
+  config_name = 'c'
   ###
 
   config_name_dict = {
@@ -35,7 +35,7 @@ def main():
     'sh': 'stag_hunt'
   }
 
-  save_name_list = [f'./MARL/data_tournament/{config_name_dict[config_name]}_{config_size.upper()}_{exp_name}']
+  save_name_list = [f'./MARL/data_tournament/{config_name_dict[config_name]}_{config_size.upper()}_{exp_name}_2']
   experiment_state_list = [f'~/ray_results/PPO/experiment_state-{config_name_dict[config_name]}_{config_size.upper()}_5M.json']
   ego_name_list = [f'{config_name}{num_seed:d}{config_size}']
   opponent_name_list = [f'{config_name}_{config_size}']
@@ -62,8 +62,10 @@ def main():
     
     for j in range(opponent_seed):
       temp_dir = './MARL/SP_eval_checkpoints/' + opponent_name + '/seed_' + str(j)
-      gen = ['gen_006/checkpoint_000875', 'gen_012/checkpoint_001625',
-            'gen_018/checkpoint_002375', 'gen_024/checkpoint_003125']
+      # gen = ['gen_006/checkpoint_000875', 'gen_012/checkpoint_001625',
+      #       'gen_018/checkpoint_002375', 'gen_024/checkpoint_003125']
+      gen = ['gen_018/checkpoint_002375', 'gen_020/checkpoint_002625', 
+             'gen_022/checkpoint_002875', 'gen_024/checkpoint_003125']
       for k in range(len(gen)):
         opponent_checkpoint.append(os.path.join(temp_dir, gen[k]))
 

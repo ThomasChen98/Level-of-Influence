@@ -24,8 +24,8 @@ def main():
   exp_name = 'PP3'
   checkpoint_dir = './MARL/PP_checkpoints/'
   num_seed = 3
-  config_size = 's'
-  config_name = 'sh'
+  config_size = 'o'
+  config_name = 'pc'
   ###
 
   config_name_dict = {
