@@ -347,8 +347,6 @@ Numpy file structure
 
 `plots_PP` for custom population-play training curve
 
-`plots_FCP` for custom fictitious co-play training curve
-
 `plots_tune` for Deep Mind sample training curve
 
 ### Data Folder
