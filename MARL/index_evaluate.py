@@ -24,9 +24,9 @@ def main():
   ###
   exp_name = 'SP5'
   checkpoint_dir = './MARL/SP_checkpoints/'
-  ego_seed_num = 1
-  opp_seed_num = 5
-  config_size = 'o'
+  ego_seed_num = 3
+  opp_seed_num = 3
+  config_size = 'l'
   config_name = 'sh'
   ###
 
@@ -37,18 +37,26 @@ def main():
     'sh': 'stag_hunt'
   }
 
-  save_name = f'./MARL/data_index/{config_name_dict[config_name]}_{config_size.upper()}_5M_2'
+  save_name = f'./MARL/data_index_33/{config_name_dict[config_name]}_{config_size.upper()}_5M_2'
   experiment_state = f'~/ray_results/PPO/experiment_state-{config_name_dict[config_name]}_{config_size.upper()}_5M.json'
   ego_name = f'{config_name}_{config_size}'
-  opp_name = f'{config_name}{opp_seed_num:d}{config_size}'
+  ego_name_2 = f'{config_name}5{config_size}'
+  opp_name = f'{config_name}5{config_size}'
 
   ego_checkpoint = []
   for j in range(ego_seed_num):
-      temp_dir = './MARL/SP_eval_checkpoints/' + ego_name + '/seed_' + str(j)
-      gen = ['gen_018/checkpoint_002375', 'gen_020/checkpoint_002625', 
-             'gen_022/checkpoint_002875', 'gen_024/checkpoint_003125']
-      for k in range(len(gen)):
-        ego_checkpoint.append(os.path.join(temp_dir, gen[k]))
+      if j == 0: # use SP_eval
+        temp_dir = './MARL/SP_eval_checkpoints/' + ego_name + '/seed_' + str(j)
+        gen = ['gen_018/checkpoint_002375', 'gen_020/checkpoint_002625', 
+              'gen_022/checkpoint_002875', 'gen_024/checkpoint_003125']
+        for k in range(len(gen)):
+          ego_checkpoint.append(os.path.join(temp_dir, gen[k]))
+      else: # use SP5 seed 3 & 4
+        temp_dir = './MARL/SP_checkpoints/' + ego_name_2 + '/seed_' + str(j+2)
+        gen = ['gen_018/checkpoint_002375', 'gen_020/checkpoint_002625', 
+              'gen_022/checkpoint_002875', 'gen_024/checkpoint_003125']
+        for k in range(len(gen)):
+          ego_checkpoint.append(os.path.join(temp_dir, gen[k]))
 
   # opponent_checkpoint_list = [20, 140, 280, 560, 600, 660, 1040, 1160, 1200, 1820, 2120]  # Chicken Large
   # opponent_checkpoint_list = [80, 160, 200, 580, 760, 980, 1120, 1460, 2300, 2740, 3020] # Chicken Obstacle
@@ -94,10 +102,10 @@ def main():
       opponent_checkpoint = [os.path.join(temp_dir, gen[_], checkpoint_list[_]) for _ in gen_list]
       print(opponent_checkpoint)
 
-      for ego_gen in range(len(ego_checkpoint)):
+      for ego_gen in range(4):
         for opp_gen in range(len(opponent_checkpoint)):
           ego_trainer = get_trainer_class(agent_algorithm)(config=config)
-          ego_trainer.restore(ego_checkpoint[ego_gen])
+          ego_trainer.restore(ego_checkpoint[ego_seed * 4 + ego_gen])
           opponent_trainer = get_trainer_class(agent_algorithm)(config=config)
           opponent_trainer.restore(opponent_checkpoint[opp_gen])
           trainer = [ego_trainer, opponent_trainer]
